@@ -44,7 +44,7 @@ funders:
           - *alice-exemplar
 
 contributions:
-  - name: "Study design, performed analysis, and wrote the manuscript"
+  - name: "Designed the study, performed analysis, and wrote the manuscript"
     url: 
     contributors:
       - *austin-meyer
