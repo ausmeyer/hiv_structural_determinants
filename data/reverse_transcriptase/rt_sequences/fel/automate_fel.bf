@@ -1,9 +1,9 @@
 /* Automates FEL with the following input. Written 10/1/2014 AGM. */
 
 BASEDIR = "/home/austin/Desktop/hiv_sequences/fel/";
-datafile="hiv_gp120_clean_dna.fasta";
+datafile="hiv_rt_clean_dna.fasta";
 output="run.log";
-treefile="hiv_gp120_clean_dna.tree";
+treefile="hiv_rt_clean_dna.tree";
 sites="sites.dat";
 
 inputRedirect = {};
