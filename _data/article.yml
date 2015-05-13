@@ -48,6 +48,10 @@ contributions:
     url: 
     contributors:
       - *austin-meyer
+      
+  - name: "Designed the study, and wrote the manuscript"
+    url: 
+    contributors:
       - *claus-wilke
 
 
