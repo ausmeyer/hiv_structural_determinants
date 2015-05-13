@@ -36,12 +36,37 @@ affiliations:
 
 funders:
   - name: "Defense Threat Reduction Agency"
-    url: http://www.nih.gov/
-    sameAs: "http://dx.doi.org/10.13039/100000002"
+    url: http://www.dtra.mil
+    sameAs: ""
     awards:
-      - name: NIH123
+      - name: HDTRA-12-C-0007
         recipients:
-          - *alice-exemplar
+          - *claus-wilke
+          
+  - name: "National Institutes of Health"
+    url: http://www.nih.gov
+    sameAs: ""
+    awards:
+      - name: R01 GM088344
+        recipients:
+          - *claus-wilke
+
+  - name: "Army Research Office"
+    url: http://www.arl.army.mil
+    sameAs: ""
+    awards:
+      - name: W911NF-12-1-0390
+        recipients:
+          - *claus-wilke
+          
+  - name: "National Science Foundation"
+    url: http://www.nsf.gov
+    sameAs: ""
+    awards:
+      - name: Cooperative Agreement No. DBI-0939454
+        recipients:
+          - *claus-wilke
+
 
 contributions:
   - name: "Designed the study, performed analysis, and wrote the manuscript"
