@@ -1,53 +1,41 @@
 # Note: to avoid repeating the same data multiple times,
 # identifiers (starting with "&") are referenced later (starting with "*")
 
-title: "My First Article"
+title: "Structural determinants of HIV evolution"
 date: 2015-03-15T12:00:00Z
 doi: # e.g. 10.1234/example.1
-github: # e.g. user-name/paper-now
+github: ausmeyer/hivgp120-paper-now
 
 authors:
-  - &alice-exemplar
-    id: "alice-exemplar"
-    name: "Alice Exemplar"
-    email: "alice.exemplar@example.com"
-    url: http://example.com/authors/1
-    orcid: "0000-0002-9298-3168"
+  - &austin-meyer
+    id: "austin-meyer"
+    name: "Austin G. Meyer"
+    email: "austin.g.meyer@gmail.com"
+    url: http://www.meyerlab.org
+    orcid: ""
 
-  - &bob-exemplar
-    id: "bob-exemplar"
-    name: "Bob Exemplar"
-    orcid: "0000-0002-9341-7985"
+  - &claus-wilke
+    id: "claus-wilke"
+    name: "Claus O. Wilke"
+    orcid: ""
 
 affiliations:
-  - name: "Stanford University"
-    department: "Department of Mathematics"
-    location: "Stanford, California, USA"
-    url: http://mathematics.stanford.edu/
+  - name: "University of Texas"
+    department: "Department of Integrative Biology"
+    location: "Austin, TX, USA"
+    url: https://integrativebio.utexas.edu
     members:
-      - *alice-exemplar
-      - *bob-exemplar
+      - *austin-meyer
+      - *claus-wilke
 
-  - name: "Harvard University"
-    department: "Department of Molecular and Cellular Biology"
-    location: "Cambridge, MA, USA"
+  - name: "Texas Tech University Health Sciences Center"
+    department: "School of Medicine"
+    location: "Lubbock, TX, USA"
     members:
-      - *alice-exemplar
+      - *austin-meyer
 
 funders:
-  - name: "Medical Research Council"
-    sameAs: "http://dx.doi.org/10.13039/501100000265"
-    awards:
-      - name: MRC123
-        recipients:
-          - *alice-exemplar
-          - *bob-exemplar
-      - name: MRC456
-        recipients:
-          - *alice-exemplar
-          - *bob-exemplar
-
-  - name: "National Institutes of Health"
+  - name: "Defense Threat Reduction Agency"
     url: http://www.nih.gov/
     sameAs: "http://dx.doi.org/10.13039/100000002"
     awards:
@@ -56,29 +44,10 @@ funders:
           - *alice-exemplar
 
 contributions:
-  - name: "Methodology"
-    url: http://dictionary.casrai.org/Contributor_Roles/Methodology
+  - name: "Study design, performed analysis, and wrote the manuscript"
+    url: 
     contributors:
-      - *alice-exemplar
-      - *bob-exemplar
+      - *austin-meyer
+      - *claus-wilke
 
-  - name: "Investigation"
-    url: http://dictionary.casrai.org/Contributor_Roles/Investigation
-    contributors:
-      - *alice-exemplar
-      - *bob-exemplar
 
-  - name: "Software"
-    url: http://dictionary.casrai.org/Contributor_Roles/Software
-    contributors:
-      - *bob-exemplar
-
-  - name: "Writing - original draft"
-    url: http://dictionary.casrai.org/Contributor_Roles/Writing_%E2%80%93_original_draft
-    contributors:
-      - *alice-exemplar
-
-  - name: "Writing - review & editing"
-    url: http://dictionary.casrai.org/Contributor_Roles/Writing_%E2%80%93_review_%26_editing
-    contributors:
-      - *bob-exemplar
