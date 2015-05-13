@@ -3,4 +3,4 @@ title: Acknowledgments
 order: 6
 container: sidebar
 ---
-Our gratitude belongs to these people.
+We would Kazutaka Katoh for help in mapping the protein structure onto gene alignments.
