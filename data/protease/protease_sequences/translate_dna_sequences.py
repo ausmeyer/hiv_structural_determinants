@@ -25,7 +25,7 @@ def translate_sequence(sequence):
   new_dna_sequence = ''
   
   i = 0
-  while i < len(sequence)/3:
+  while i < len(sequence)-1:
     codon = str(sequence[i]) + str(sequence[i+1]) + str(sequence[i+2])
     if codon in codontable.keys():
       new_dna_sequence += codon
