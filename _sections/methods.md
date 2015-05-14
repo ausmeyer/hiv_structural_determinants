@@ -7,7 +7,7 @@ order: 3
 
 Gene sequences came from the HIV database at Los Alamos National Laboratory ([HIV Database](http://www.hiv.lanl.gov/content/index)). We used only pre-made gene alignments. The alignments were assumed correct and therefore not changed for all of the genes in this study. To identify the genes in the whole genome sequences, we used the annotation landmarks available in the sequence database ([HIV Landmarks](http://www.hiv.lanl.gov/content/sequence/HIV/MAP/landmark.html)). The sequences were filtered to only include those with entirely canonical bases. 
 
-### Calculating evolutionary rates
+### Calculating the site-wise evolutionary rate ratio
 
 We built phylogenetic tree with FastTree 2.1.7 with the following input line.
 
