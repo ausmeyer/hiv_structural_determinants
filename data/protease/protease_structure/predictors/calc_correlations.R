@@ -44,3 +44,7 @@ print(summary(fit))
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
                                                                     predict(lm(dN.dS ~ distances[, x])))))
 write.table(data.frame(correlations), file= 'distance_model.correlations', row.names=F, col.names=F)
+
+correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
+                                                                    predict(lm(dN.dS ~ rsa + distances[, x])))))
+write.table(data.frame(correlations), file= 'combined_model.correlations', row.names=F, col.names=F)
