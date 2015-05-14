@@ -33101,3 +33101,5 @@ Optimization settings:
 Initial parameter values
 
 dNdS = 1
+Internal error in _LikelihoodFunction::ConjugateGradientDescent. The function evaluated at current parameter values [-194.5676004820474] does not match the last recorded LF maximum [-194.4528021582546]
+Internal error in _LikelihoodFunction::ConjugateGradientDescent. The function evaluated at current parameter values [-194.4528022081658] does not match the last recorded LF maximum [-194.4528021582636]
