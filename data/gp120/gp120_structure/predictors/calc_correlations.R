@@ -3,9 +3,9 @@ rm(list = ls())
 rates <- read.table('sites.dat', head=T, sep=',', stringsAsFactors=F)
 rsa <- read.table('4TVP_trimer.rsa', head=T, stringsAsFactors=F)$RSA
 distances <- read.table('4TVP_monomer_distances.dat', head=F, sep=',', stringsAsFactors=T)
-map <- read.table('aas.fasta.map', head=F, stringsAsFactors=F)
+map <- read.table('aas.fasta.map', head=T, stringsAsFactors=F)
 
-dN.dS <- rates$dNdS[map$V3 != '-']
+dN.dS <- rates$dN.dS[map$aa != '-']
 
 correlations <- as.vector(sapply(distances, function(x) cor(dN.dS[x!=0], predict(lm(dN.dS[x!=0] ~ I(x[x!=0]))))))
 

@@ -15,9 +15,8 @@ codontable = {
     'GGA':'G', 'GGC':'G', 'GGG':'G', 'GGT':'G',
     'TCA':'S', 'TCC':'S', 'TCG':'S', 'TCT':'S',
     'TTC':'F', 'TTT':'F', 'TTA':'L', 'TTG':'L',
-    'TAC':'Y', 'TAT':'Y', 'TAA':'*', 'TAG':'*',
-    'TGC':'C', 'TGT':'C', 'TGA':'*', 'TGG':'W',
-    '---':'-'
+    'TAC':'Y', 'TAT':'Y', 'TGC':'C', 'TGT':'C', 
+    'TGG':'W', '---':'-'
 }
 
 def translate_sequence(sequence):
@@ -25,6 +24,7 @@ def translate_sequence(sequence):
   new_dna_sequence = ''
   
   i = 0
+  
   while i < len(sequence) - 1:
     codon = str(sequence[i]) + str(sequence[i+1]) + str(sequence[i+2])
     if codon in codontable.keys():
