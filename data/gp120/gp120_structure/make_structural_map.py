@@ -80,33 +80,6 @@ def make_combined_alignment(alignment, aas):
 
   subprocess.call('mafft --mapout --addfragments aas.fasta ' + str(alignment) + ' > new_alignment.fasta', shell=True) 
 
-  new_alignment = list(SeqIO.parse(open('new_alignment.fasta', 'r'), 'fasta'))
-
-  which_seq = 0
-  keep_sites = np.ones(len(new_alignment[0].seq))
-  for i, record in enumerate(new_alignment):
-    if str(record.id) == 'ref_seq':
-      which_seq = i
-
-    for j, site in enumerate(record.seq):
-      if site == '*':
-        keep_sites[j] = 0
-        print(site)
-        
-  outmap = open('structural_map.txt', 'w')
-  outmap.write('aa\talignment\tprotein\n')
-  protein_counter = 0
-  alignment_counter = 0
-  for j, site in enumerate(new_alignment[which_seq].seq):
-    if keep_sites[j] == 1:
-      alignment_counter += 1
-      if site != '-':
-        protein_counter += 1
-      
-      outmap.write(str(site) + '\t' + str(alignment_counter) + '\t' + str(protein_counter) + '\n')
-
-  outmap.close()
-
 ## Execute the main function
 
 if __name__ == "__main__":
