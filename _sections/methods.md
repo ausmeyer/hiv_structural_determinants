@@ -13,7 +13,7 @@ Protein structures were obtained from the RCSB Protein Databank (PDB). For each 
 
 To map the protein structures onto the existing alignment, we used a developmental version of the sequence alignment software MAFFT. This version included the ability to add a sequence to an existing alignment while removing any sites where there was an insertion in the protein structure sequence. Therefore, we used the following input line.
 
-<pre> <span font-family:courier>mafft --mapout --addfragments aas.fasta alignment.fasta > added_alignment.fasta</span> </pre>
+<pre> <span font-family:georgia>mafft --mapout --addfragments aas.fasta alignment.fasta > added_alignment.fasta</span> </pre>
 
 ### Calculating evolutionary rates
 
