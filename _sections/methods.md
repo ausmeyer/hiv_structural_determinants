@@ -5,7 +5,7 @@ order: 3
 
 ### Obtaining and preparing HIV gene sequences
 
-Gene sequences came from the HIV database at Los Alamos National Laboratory ([HIV Database](http://www.hiv.lanl.gov/content/index)). We used only pre-made gene alignments. The alignments were assumed correct and therefore not changed for all of the genes in this study. To identify the genes in the whole genome sequences, we used the annotation landmarks available in the sequence database ([HIV Landmarks](http://www.hiv.lanl.gov/content/sequence/HIV/MAP/landmark.html)). The sequences were filtered to only include those with entirely canonical bases. 
+Gene sequences came from the HIV database at Los Alamos National Laboratory ([HIV Database](http://www.hiv.lanl.gov/content/index)). We used only pre-made gene alignments. The alignments were assumed correct and therefore not changed for all of the genes in this study. To identify the genes in the whole genome sequences, we used the annotation landmarks available in the sequence database ([HIV Landmarks](http://www.hiv.lanl.gov/content/sequence/HIV/MAP/landmark.html)). With [this script](data/gp120/gp120_sequences/translate_dna_sequences.py), sequences were filtered to include only those with entirely canonical bases, and to change stop codons in the original alignment to gaps. 
 
 ### Calculating the site-wise evolutionary rate ratio
 
