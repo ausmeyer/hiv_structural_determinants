@@ -1,6 +1,6 @@
 /* Automates FEL with the following input. Written 10/1/2014 AGM. */
 
-BASEDIR = "/home/austin/Desktop/hiv_structural_determinants-paper-now/data/capsid/capsid_sequences/fel/";
+BASEDIR = "/home/austin/Desktop/hiv_structural_determinants/data/capsid/capsid_sequences/fel/";
 datafile="hiv1_capsid_clean_dna.fasta";
 output="run.log";
 treefile="hiv1_capsid_clean_dna.tree";

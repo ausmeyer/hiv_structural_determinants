@@ -1,6 +1,6 @@
 /* Automates FEL with the following input. Written 10/1/2014 AGM. */
 
-BASEDIR = "/home/austin/Desktop/hiv_structural_determinants-paper-now/data/gp120/gp120_sequences/fel/";
+BASEDIR = "/home/austin/Desktop/hiv_structural_determinants/data/gp120/gp120_sequences/fel/";
 datafile="hiv1_gp120_clean_dna.fasta";
 output="run.log";
 treefile="hiv1_gp120_clean_dna.tree";
