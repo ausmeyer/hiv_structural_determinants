@@ -6,4 +6,4 @@ title: "A box chart"
 description: "A description of the data"
 image: "data/figures/figure.png"
 ---
-<img src="{{ site.baseurl }}/data/figures/figure.png">
+<img src="{{ site.baseurl }}/data/figures/box_plot.png">
