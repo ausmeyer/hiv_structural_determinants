@@ -1,11 +1,16 @@
 rm(list = ls())
 
-rates <- read.table('sites.dat', head=T, sep=',', stringsAsFactors=F)
+map <- read.table('aas.fasta.map', sep=',', head=F, stringsAsFactors=F)
 rsa <- read.table('1HPV_dimer.rsa', head=T, stringsAsFactors=F)$RSA
+rsa <- rsa[map$V3!='-']
 distances <- read.table('distances.dat', head=F, sep=',', stringsAsFactors=T)
-map <- read.table('aas.fasta.map', head=F, stringsAsFactors=F)
+distances <- distances[map$V3!='-', map$V3!='-']
 
-dN.dS <- rates$dN.dS[map$V3]
+
+rates <- read.table('sites.dat', head=T, sep=',', stringsAsFactors=F)
+keep.alignment.sites <- map$V3[map$V3 != '-']
+dN.dS <- rates$dN.dS[as.numeric(keep.alignment.sites)]
+
 best.site <- c()
 best.r <- c()
 rfree <- c()
@@ -43,8 +48,12 @@ print(summary(fit))
 
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
                                                                     predict(lm(dN.dS ~ distances[, x])))))
-write.table(data.frame(correlations), file= 'distance_model.correlations', row.names=F, col.names=F)
+new.correlations <- rep(median(correlations), length(map$V3))
+new.correlations[as.numeric(map$V2[map$V3 != '-'])] <- correlations
+write.table(data.frame(new.correlations), file= 'distance_model.correlations', row.names=F, col.names=F)
 
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
                                                                     predict(lm(dN.dS ~ rsa + distances[, x])))))
-write.table(data.frame(correlations), file= 'combined_model.correlations', row.names=F, col.names=F)
+new.correlations <- rep(median(correlations), length(map$V3))
+new.correlations[as.numeric(map$V2[map$V3 != '-'])] <- correlations
+write.table(data.frame(new.correlations), file= 'combined_model.correlations', row.names=F, col.names=F)
