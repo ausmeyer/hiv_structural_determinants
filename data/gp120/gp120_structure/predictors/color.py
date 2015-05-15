@@ -1,5 +1,5 @@
 # open the file of new values (just 1 column of numbers, one for each alpha carbon)
-inFile = open("distance_model.correlations", 'r')
+inFile = open("combined_model.correlations", 'r')
  
 # create the global, stored array
 stored = []
@@ -14,10 +14,10 @@ max_b = max(stored)
 min_b = min(stored)
  
 # clear out the old B Factors
-cmd.alter("Renumbered_Structure and n. CA", "b=0.0")
+cmd.alter("4TVP_monomer and n. CA", "b=0.0")
     
 # update the B Factors with new properties
-cmd.alter("Renumbered_Structure and n. CA", "b=stored.pop(0)")
+cmd.alter("4TVP_monomer and n. CA", "b=stored.pop(0)")
  
 # color the protein based on the new B Factors of the alpha carbons
-cmd.spectrum("b", "rainbow_rev", "Renumbered_Structure and n. CA", minimum=min_b, maximum=max_b)
+cmd.spectrum("b", "rainbow_rev", "4TVP_monomer and n. CA", minimum=min_b, maximum=max_b)

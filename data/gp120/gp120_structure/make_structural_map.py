@@ -78,7 +78,7 @@ def make_combined_alignment(alignment, aas):
   aa_file.write('>ref_seq\n' + str(aas) + '\n')
   aa_file.close()
 
-  subprocess.call('mafft --mapout --addfragments aas.fasta ' + str(alignment) + ' > new_alignment.fasta', shell=True) 
+  subprocess.call('mafft-linsi --keepgaponlysites --add aas.fasta ' + str(alignment) + ' > new_alignment.fasta', shell=True) 
 
 ## Execute the main function
 
