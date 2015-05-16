@@ -40,6 +40,9 @@ for(i in 1:100) {
 
 print(mean(best.r))
 print(mean(rfree))
+fit.rsa <- lm(dN.dS ~ rsa)
+print(summary(fit.rsa)$r.squared)
+
 print(table(best.site))
 
 fit.site <- as.numeric(names(sort(-table(best.site)))[1])
