@@ -59,4 +59,4 @@ p <- ggplot(aes(x = names, y = r.square, fill=r.type, colour=NULL), data = df) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) +
   scale_y_continuous(limits = c(0, 0.4))
 
-ggsave("r_squared.pdf", p, width=7.5, height=7.5)
+ggsave("r_squared.png", p, width=7.5, height=7.5)
