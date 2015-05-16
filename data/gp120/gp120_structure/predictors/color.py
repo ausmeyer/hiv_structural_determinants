@@ -20,4 +20,4 @@ cmd.alter("4TVP_monomer_onlygp120 and n. CA", "b=0.0")
 cmd.alter("4TVP_monomer_onlygp120 and n. CA", "b=stored.pop(0)")
  
 # color the protein based on the new B Factors of the alpha carbons
-cmd.spectrum("b", "rainbow", "4TVP_monomer_onlygp120 and n. CA", minimum=min_b, maximum=max_b)
+cmd.spectrum("b", "rainbow_rev", "4TVP_monomer_onlygp120 and n. CA", minimum=min_b, maximum=max_b)
