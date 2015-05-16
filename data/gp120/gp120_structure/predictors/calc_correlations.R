@@ -42,6 +42,9 @@ print(mean(best.r))
 print(mean(rfree))
 print(table(best.site))
 
+fit.rsa <- lm(dN.dS ~ rsa)
+print(summary(fit.rsa)$r.squared)
+
 fit.site <- as.numeric(names(sort(-table(best.site)))[1])
 fit <- lm(dN.dS ~ rsa + distances[, fit.site])
 print(summary(fit))
