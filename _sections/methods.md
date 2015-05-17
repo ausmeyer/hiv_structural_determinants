@@ -25,4 +25,6 @@ To map protein structures onto the existing alignment, we used a developmental v
 
 <pre> <span style="font-family:Courier">mafft --mapout --addfragments aas.fasta alignment.fasta > added_alignment.fasta</span> </pre>
 
-### Building models and mapping back to protein structures
+### Calculating structural predictors
+
+We used two independent structural predictors from the protein structures.
