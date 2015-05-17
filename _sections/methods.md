@@ -27,4 +27,8 @@ To map protein structures onto the existing alignment, we used a developmental v
 
 ### Calculating structural predictors
 
-We used two independent structural predictors from the protein structures.
+We used two independent structural predictors from the protein structures. The first was relative solvent accessibility (RSA) which has been detailed extensively previously. We used the program DSSP to compute the absolute solvent accessibilities of each residue in the protein. Then, we used maximum absolute accessibility values for each residue to normalize solvent exposure to a value between 0 and 1. For all models in this study, we used the RSA of a chain in the functional multimeric state of the biological assembly. The second metric was distance to a reference point. To compute the set of distances, we used each C-alpha in the protein as a reference point, and calculated the distance to every other C-alpha. Thus, the distances from a single C-alpha to every other C-alpha constituted a single distance set. We repeated this calculation using every amino acid to generate a symmetric matrix of distances where the diagonal is always zero as it is simply the distance from an amino acid to itself.
+
+### Constructing linear models and cross validation
+
+
