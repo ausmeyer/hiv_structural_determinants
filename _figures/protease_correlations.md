@@ -2,7 +2,7 @@
 layout: figure
 order: 5
 label: Figure 5
-title: "Correlation maps of the HIV protease."
+title: "Maps of the HIV protease."
 description: "The distance-rsa model predication versus empricial dN/dS correlation plotted onto the protease protein structure. Red colors represent relatively high correlations. Blue colors represent relatively low correlations. The correlations control for RSA. The volume containing the protease protein colored cartoon is the surface plot of the entire dimeric functional protease complex. In A, we show a front view of the correlation map. In B, we show the side view of the correlations map."
 image: "data/protease/protease_structure/predictors/1HPV.png"
 ---
