@@ -3,4 +3,4 @@ title: Acknowledgments
 order: 6
 container: sidebar
 ---
-Our gratitude belongs to these people.
+We would like to thank Kazutaka Katoh for his help in mapping structures to alignments.

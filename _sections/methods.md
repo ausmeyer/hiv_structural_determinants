@@ -15,7 +15,7 @@ We built phylogenetic trees with FastTree 2.1.7 with the following input line.
 
 In addition, we made minor changes to the FastTree source code to prevent rounding errors in the tree branch lengths (the branch length issue was detailed  [here](http://darlinglab.org/blog/2015/03/23/not-so-fast-fasttree.html)).
 
-Given a codon alignment and evolutionary tree, we used the phylogenetic software HyPHy to calculate the evolutionary rate ratio (dN/dS). We used the built-in one-rate fixed effects likelihood (FEL) method with the default model. The FEL method calculates an independent dN/dS value at each column in the alignment. To calculate a one-rate dN/dS value, the model computes a single dS/dt value for the entire alignment and an individual dN/dt at each site. It then normalizes each dN/dt value by dividing by the average dS/dt to obtain dN/dS. 
+Given a codon alignment and evolutionary tree, we used the phylogenetic software HyPHy to calculate the evolutionary rate ratio (*dN/dS*). We used the built-in one-rate fixed effects likelihood (FEL) method with the default model. The FEL method calculates an independent *dN/dS* value at each column in the alignment. To calculate a one-rate *dN/dS* value, the model computes a single *dS/dt* value for the entire alignment and an individual *dN/dt* at each site. It then normalizes each *dN/dt* value by dividing by the average *dS/dt* to obtain *dN/dS*. 
 
 ### Obtaining and mapping protein structures
 
@@ -31,4 +31,4 @@ We used two independent structural predictors from the protein structures. The f
 
 ### Constructing linear models and cross validation
 
-
+It has been shown previously that RSA is a relatively strong structural predictor for site-wise *dN/dS* both in viruses and large enzyme datasets. Thus, we started with a linear model that predicted site-wise *dN/dS* with site-wise RSA. Then, to find the best reference point among the entire set of reference points, we constructed combined linear models with both RSA and the distance set from a single reference point. To guard against overfitting, we trained the model on a randomly chosen 75% of the data and reserved 25% for validation of the best reference point found in the training set. To be clear, all of the possible reference points were available for training, but for each training set we only used *dN/dS*, RSA, and distances for 75% of the sites. We repeated the training and validation 100 times for each protein. We found that the training and validation R<sup>2</sup> and p-value we very similar. Therefore, for each protein, we used the site that was found most frequently during training as the best site for the final prediction.

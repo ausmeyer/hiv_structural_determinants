@@ -14,6 +14,7 @@ dN.dS <- rates$dN.dS[as.numeric(keep.alignment.sites)]
 best.site <- c()
 best.r <- c()
 rfree <- c()
+aicfree <- c()
 
 for(i in 1:100) {
   small.set <- sample(1:length(dN.dS), length(dN.dS)*0.75)
@@ -22,20 +23,25 @@ for(i in 1:100) {
   fit.rsa <- rsa[small.set]
   
   fit.correlations <- as.vector(sapply(1:ncol(fit.distances), function(x) cor(fit.dN.dS, 
-                                                                              predict(lm(fit.dN.dS ~ fit.rsa + fit.distances[, x])))))
+                                                                              predict(lm(fit.dN.dS ~ fit.rsa + fit.distances[, 152] + fit.distances[, 101] + fit.distances[, 148] + fit.distances[, x])))))
   
   best <- which(fit.correlations^2 == max(fit.correlations^2))
   best.site <- append(best.site, best)
   
   free.dN.dS <- dN.dS[-small.set]
   free.distances <- distances[-small.set, best]
+  distances.152 <- distances[-small.set, 152]
+  distances.101 <- distances[-small.set, 101]
+  distances.148 <- distances[-small.set, 148]
   free.rsa <- rsa[-small.set]
   
+  free.fit <- lm(free.dN.dS ~ free.rsa + free.distances + distances.152 + distances.101 + distances.148)
   free.correlations <- cor(free.dN.dS, 
-                           predict(lm(free.dN.dS ~ free.rsa + free.distances)))
+                           predict(free.fit))
   
   best.r <- append(best.r, max(fit.correlations^2))
   rfree <- append(rfree, max(free.correlations^2))
+  aicfree <- append(aicfree, AIC(free.fit))
 }
 
 print(mean(best.r))
@@ -46,7 +52,7 @@ fit.rsa <- lm(dN.dS ~ rsa)
 print(summary(fit.rsa)$r.squared)
 
 fit.site <- as.numeric(names(sort(-table(best.site)))[1])
-fit <- lm(dN.dS ~ rsa + distances[, fit.site])
+fit <- lm(dN.dS ~ rsa + distances[, 152] + distances[, 101] + distances[, 148])
 print(summary(fit))
 
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
