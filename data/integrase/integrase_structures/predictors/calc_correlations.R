@@ -49,6 +49,9 @@ fit.site <- as.numeric(names(sort(-table(best.site)))[1])
 fit <- lm(dN.dS ~ rsa + distances[, fit.site])
 print(summary(fit))
 
+fit.distance <- lm(dN.dS ~ distances[, fit.site])
+print(summary(fit.distance))
+
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
                                                                     predict(lm(dN.dS ~ distances[, x])))))
 new.correlations <- rep(median(correlations), length(map$V3))

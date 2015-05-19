@@ -33,6 +33,10 @@ r.free.6 <- 0.05723965
 r.rsa.6 <- 0.04350685
 r.6 <- "Reverse Transcriptase"
 
+print(mean(r.value.1, r.value.2, r.value.3, r.value.4, r.value.5, r.value.6))
+print(mean(r.free.1, r.free.2, r.free.3, r.free.4, r.free.5, r.free.6))
+print(mean(r.rsa.1, r.rsa.2, r.rsa.3, r.rsa.4, r.rsa.5, r.rsa.6))
+
 rs <- c(r.value.1, r.free.1, r.rsa.1, 
         r.value.2, r.free.2, r.rsa.2, 
         r.value.3, r.free.3, r.rsa.3, 
