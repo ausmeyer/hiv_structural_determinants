@@ -63,3 +63,9 @@ correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS,
 new.correlations <- rep(median(correlations), length(map$V3))
 new.correlations[as.numeric(map$V2[map$V3 != '-'])] <- correlations
 write.table(data.frame(new.correlations), file= 'combined_model.correlations', row.names=F, col.names=F)
+
+library(ggplot2)
+library(cowplot)
+
+p <- ggplot(data.frame(x=1:length(dN.dS), y=dN.dS), aes(x=x, y=y)) + geom_point()
+show(p)

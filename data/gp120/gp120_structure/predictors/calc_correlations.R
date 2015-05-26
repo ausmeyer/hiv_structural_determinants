@@ -46,8 +46,11 @@ print(summary(fit.rsa)$r.squared)
 
 print(table(best.site))
 
+glyc <- read.table('4TVP_glycosylations.txt', head=F, stringsAsFactors = F)
+glycosylations <- rep(0, length(dN.dS))
+glycosylations[glyc$V1] <- 1
 fit.site <- as.numeric(names(sort(-table(best.site)))[1])
-fit <- lm(dN.dS ~ rsa + distances[, fit.site])
+fit <- lm(dN.dS ~ rsa + glycosylations)
 print(summary(fit))
 
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
@@ -63,3 +66,9 @@ new.correlations[as.numeric(map$V2[map$V3 != '-'])] <- correlations
 write.table(data.frame(new.correlations), file= 'combined_model.correlations', row.names=F, col.names=F)
 
 write.table(data.frame(predict(fit)), file = 'predicted.rates', row.names=F, col.names=F)
+
+library(ggplot2)
+library(cowplot)
+
+p <- ggplot(data.frame(x=1:length(dN.dS), y=dN.dS), aes(x=x, y=y)) + geom_point()
+show(p)

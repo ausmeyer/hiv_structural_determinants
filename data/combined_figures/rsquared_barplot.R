@@ -6,31 +6,37 @@ setwd('~/Google Drive/Documents/PostDoc/HIVStructuralDeterminants/hiv_structural
 r.value.1 <- 0.1001862
 r.free.1 <- 0.09242819
 r.rsa.1 <- 0.05076719
+mean.dN.dS.1 <- 0.2
 r.1 <- "Capsid"
 
 r.value.2 <- 0.3716488
 r.free.2 <- 0.3637618
 r.rsa.2 <- 0.1812471
+mean.dN.dS.2 <- 0.7836029
 r.2 <- "gp120"
 
 r.value.3 <- 0.02647536
 r.free.3 <- 0.02928405
 r.rsa.3 <- 0.003255963
+mean.dN.dS.3 <- 0.1889462
 r.3 <- "Integrase"
 
 r.value.4 <- 0.1325805
 r.free.4 <- 0.09904008
 r.rsa.4 <- 0.0609476
+mean.dN.dS.4 <- 0.5024948
 r.4 <- "Matrix"
 
 r.value.5 <- 0.3104171
 r.free.5 <- 0.3069456
 r.rsa.5 <- 0.04737184
+mean.dN.dS.5 <- 0.2619128
 r.5 <- "Protease"
 
 r.value.6 <- 0.06046455
 r.free.6 <- 0.05723965
 r.rsa.6 <- 0.04350685
+mean.dN.dS.6 <- 0.2514634
 r.6 <- "Reverse Transcriptase"
 
 print(mean(r.value.1, r.value.2, r.value.3, r.value.4, r.value.5, r.value.6))
