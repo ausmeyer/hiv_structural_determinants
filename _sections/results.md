@@ -6,7 +6,7 @@ order: 4
 
 The HIV genome encodes 15 proteins that can be divided into three general categories. The first, the enzymes, are all encoded by *pol* gene. There are three separate enzyme proteins encodes by the *pol* gene. They are, in the order of their reference genome numbering, protease, reverse transcriptase (including the RNase H domain), and integrase. Each of these three enzymes assumes a homodimeric quaternary structure and all three have clinically available inhibitory drugs. The second category of proteins encoded by the HIV genome are the structural proteins; they are encoded by two different genes in HIV. The matrix, capsid, and nucleocapsid are purely structural and are coded for in the *gag* gene. Alternatively, the external glycoprotein (gp120) and transmembrane glycoprotein (gp41) are encoded by the *env* gene, and serve as the primary human receptor-binding and uptake functions for the virus. The third category of HIV proteins make up a disparate mix of accessory and regulatory functions for the virus. These proteins include vpu, vif, vpr, p6, nef, rev, and tat. For this study, we have chosen to focus on the enzymes and structural proteins. Specifically we analyze sequence data and structures for protease, reverse transcriptase, integrase, the matrix and capsid proteins as well as the apical portion of the ectodomain of the HIV glycoprotein, gp120. 
 
-### Structural predictors of HIV evolution
+## Structural predictors of HIV evolution
 
 There are a number of structure-based predictors of *dN/dS* that have been described previously; the most commonly used are RSA and WCN. Both have been shown to provide statistically significant predictions of *dN/dS* in other viral systems and large enzyme protein sets; generally, WCN is a stronger predictor than RSA. However, for viral proteins, RSA has been shown to be a reliably better predictor of *dN/dS* in viral systems. Therefore, in this study, we used RSA as the baseline evolutionary predictor. In addition, it is possible to calculate RSA in any of several different conformational states. Most simply, one could simply ignore the higher order quaternary structure of protein complexes and measure RSA on each monomeric unit. Alternatively, one could generate ever more complex multimeric assemblies on which to calculate RSA. We chose to use the minimal multimeric state (called the biological assembly in the protein databank) which has been shown to be the strongest predictor of *dN/dS* in influenza. 
 
@@ -16,7 +16,7 @@ We found that using RSA in a single predictor model performs poorly in the major
 
 Adding the distance to a reference point, improved predictions of *dN/dS* in all of the proteins tested. On average, the models that included distance were able to account for nearly twice as much variation in *dN/dS* on the test data set than did the models with RSA alone. Moreover, for each protein, there was relatively little connection between the strength of the initial model that included only RSA and the strength of the best models that included both distance and RSA. For example, the RSA-only model for protease was the third worst explanatory, but jumped to become the second best model with one distance predictor. By contrast, the RSA-only model for reverse transcriptase was virtually identical in predictive power to that of protease; however, the addition of distance did provide even a minimally significant improvement in *dN/dS* predictions. 
 
-### Implications of structural models
+## Implications of structural models
 
 #### Evolution in the capsid
 
