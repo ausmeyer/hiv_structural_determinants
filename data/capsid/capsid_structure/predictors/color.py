@@ -1,5 +1,5 @@
 # open the file of new values (just 1 column of numbers, one for each alpha carbon)
-inFile = open("combined_model.correlations", 'r')
+inFile = open("distance.correlations", 'r')
  
 # create the global, stored array
 stored = []

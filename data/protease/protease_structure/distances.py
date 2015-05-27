@@ -11,7 +11,7 @@ def calc_distances_aas(model):
         distances = []
         for b in model.get_residues():
             if b.get_resname() != 'SIA':
-                distance = b['CA'] - a['CA']
+                distance = a['CA'] - b['CA']
                 distances.append(distance)
         sites.append(distances)
         print(count)

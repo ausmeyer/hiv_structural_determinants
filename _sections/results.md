@@ -30,13 +30,15 @@ The apical solvent exposed surface of the gp120 protein appears to be under inte
 
 **Evolution in the the matrix protein**
 
-The functional assembly units of the HIV matrix consists of trimers of the matrix protein. Unlike the other structural proteins (the capsid and the gp120 protein), the matrix has a relatively small contact surface with adjacent monomeric proteins in the functional trimer. Despite the structural differences in size and shape between the matrix and capsid proteins, the structural predictors performed almost identically in the combined models. The validated combined model for the matrix protein explained about 9.9% of the variation in *dN/dS* compared to 9.2% in the capsid. Also, like the capsid, there appears to be no region that is under uniformly strong selective pressure [Figure 4A](#figure-4), and the cluster of sites with the highest pressure appear to be near the center of the protein; such a finding is unusual for protein evolution [Figure 4B](#figure-4).
+The biological assembly subunits of the HIV matrix consists of trimers of the matrix protein. Unlike the other structural proteins (the capsid and the gp120 protein), the matrix has a relatively small contact surface with adjacent monomeric proteins in the functional trimer. Despite the structural differences in size and shape between the matrix and capsid proteins, the structural predictors performed almost identically in the combined models. The validated combined model for the matrix protein explained about 9.9% of the variation in *dN/dS* compared to 9.2% in the capsid. Also, like the capsid, there appears to be no region that is under uniformly strong selective pressure [Figure 4A](#figure-4), and the cluster of sites with the highest pressure appear to be near the center of the protein; such a finding is unusual for protein evolution [Figure 4B](#figure-4).
 
 **Evolution in the integrase**
 
 The available structures of integrase show it in a symmetric dimer structure with eccentric arms protruding from the interaction surface. Unfortunately, no structural predictors provided a statistically significant model of integrase evolution.
 
 **Evolution in the protease**
+
+The protease is a familiar heart-shaped dimer in the biological assembly. The catalytic site of the complex is in the interface between the two monomers. Therefore, as the enzyme active site must be accessible, the protein-protein binding region has a relatively high solvent exposure [Figure 5](#figure-5) compared to other protein-protein interfaces. In this case, we expected the highly solvent exposed catalytic site to cause an RSA-only model to perform poorly. Indeed, RSA alone could explain only 4.7% of the variation in *dN/dS*. By contrast, adding distance produces the second best model among the six proteins tested. The *dN/dS* predictions with the combined rsa-distance model showed that the catalytic site of protease is very conserved relative to the exterior regions of the protein. 
 
 **Evolution in the reverse transcriptase**
 

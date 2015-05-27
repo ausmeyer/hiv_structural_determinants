@@ -50,10 +50,10 @@ fit <- lm(dN.dS ~ rsa + distances[, fit.site])
 print(summary(fit))
 
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
-                                                                    predict(lm(dN.dS ~ distances[, x])))))
+                                                                    distances[, x])))
 new.correlations <- rep(median(correlations), length(map$V3))
 new.correlations[as.numeric(map$V2[map$V3 != '-'])] <- correlations
-write.table(data.frame(new.correlations), file= 'distance_model.correlations', row.names=F, col.names=F)
+write.table(data.frame(new.correlations), file= 'distance.correlations', row.names=F, col.names=F)
 
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
                                                                     predict(lm(dN.dS ~ rsa + distances[, x])))))
@@ -62,6 +62,7 @@ new.correlations[as.numeric(map$V2[map$V3 != '-'])] <- correlations
 write.table(data.frame(new.correlations), file= 'combined_model.correlations', row.names=F, col.names=F)
 
 write.table(data.frame(predict(fit)), file='predicted.rates', row.names=F, col.names=F)
+write.table(data.frame(dN.dS), file='actual.rates', row.names=F, col.names=F)
 
 library(ggplot2)
 library(cowplot)
