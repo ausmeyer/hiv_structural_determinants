@@ -16,7 +16,7 @@ We found that using RSA in a single predictor model performs poorly in the major
 
 Adding the distance to a reference point, improved predictions of *dN/dS* in all of the proteins tested. On average, the models that included distance were able to account for nearly twice as much variation in *dN/dS* on the test data set than did the models with RSA alone. Moreover, for each protein, there was relatively little connection between the strength of the initial model that included only RSA and the strength of the best models that included both distance and RSA. For example, the RSA-only model for protease was the third worst explanatory, but jumped to become the second best model with one distance predictor. By contrast, the RSA-only model for reverse transcriptase was virtually identical in predictive power to that of protease; however, the addition of distance did provide even a minimally significant improvement in *dN/dS* predictions. 
 
-### Specific structural models of HIV evolution
+### Protein-specific structural models of HIV evolution
 
 **Evolution of the HIV capsid**
 
