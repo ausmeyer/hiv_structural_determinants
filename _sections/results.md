@@ -18,28 +18,28 @@ Adding the distance to a reference point, improved predictions of *dN/dS* in all
 
 ### Specific structural models of HIV evolution
 
-**Evolution in the capsid**
+**Evolution of the HIV capsid**
 
 The capsid protein is a functional hexamer with extensive contacts and dramatically overlapping domains to the adjacent monomeric unit. The hexameric units form the basic building blocks for assembling the entire super-structure of the viral capsid. There is no part of the capsid protein that appears to be under particularly strong evolutionary pressure. The mean *dN/dS*=0.2 is the second lowest value among the proteins we studied. Moreover, the combined structural model could predict less than 10% of the variation in *dN/dS*. The sites with the highest predicted rate of adaption are near the N-terminal region of the monomeric protein, and the sites with the lowest predicted rate of adaptation of near the C-terminal end [Figure 2A](#figure-2). In addition, distances to sites nearest the N-terminal region of the monomeric protein show the highest positive predictive power for *dN/dS* [Figure 2B](#figure-2); therefore, sites nearest the N-terminal region of the capsid are, on average, under the most adaptive pressure for structural constraints. 
 
-**Evolution in the gp120 protein**
+**Evolution of the HIV gp120 protein**
 
 The HIV receptor-binding complex is made up of an ectodomain as well as transmembrane and intracellular segments. The ectodomain consists of a homo-trimer of hetero-dimers where each of the dimers consists of a gp120 and gp41 protein. The gp120 protein serves as the apical segment and the gp41 protein serves as the basal segment. Thus, gp120 is farthest from the viral surface and the most exposed HIV protein to host immune system. 
 
 The apical solvent exposed surface of the gp120 protein appears to be under intense adaptive pressure. Therefore, as we expected, solvent exposure alone accounted for a large fraction of the adaptive evolution. However, adding a single distance constraint to the model, nearly doubled the amount of variation explained by the model. Where the RSA-only model produced a relatively uniform rate prediction over the entire surface of gp120, adding the set of distances to the linear model, oriented the elevated *dN/dS* predictions toward the apical surface of the protein [Figure 3A](#figure-3). In addition, though glycosylation sites alone were able to predict a small amount of adaptive evolution in gp120, adding glycosylation sites to the combined model did not improve or change the overall rate predictions; viewing the glycosylation sites of the protein surface suggests that RSA, and not specific glycosylation sites, provides the most systematic adaptive pressure to gp120 [Figure 3B](#figure-3). Therefore, it seems glycosylations are not an important generalized constraint for gp120 adaptive evolution. We also found that the surface whose distances provided the highest positive predictive power were located on the apical surface of the ectodomain [Figure 3C](#figure-3). Therefore, sites near the surface of the protein and farthest away from the viral surface are on average under the strongest adaptive pressure. In addition, no clear connection emerged between the glycosylation pattern and the surface with maximum adaptive pressure [Figure 3D](#figure-3).
 
-**Evolution in the the matrix protein**
+**Evolution of the HIV matrix**
 
 The fundamental biological assembly of the HIV matrix consists of homo-trimers of the matrix protein. Unlike the other structural proteins (the capsid and the gp120 protein), the matrix protein has a relatively small contact surface with adjacent monomeric proteins in the functional trimer. Despite the structural differences in size and shape between the matrix and capsid proteins, the structural predictors performed almost identically in the combined models. The validated combined model for the matrix protein explained about 9.9% of the variation in *dN/dS* compared to 9.2% in the capsid. Also, like the capsid, there appears to be no region that is under uniformly strong selective pressure [Figure 4A](#figure-4), and the cluster of sites with the highest pressure appear to be on the long eccentric arms of the trimer [Figure 4B](#figure-4).
 
-**Evolution in the integrase**
+**Evolution of the HIV integrase**
 
 The available structures of integrase show it in a symmetric dimer structure with eccentric arms protruding from the interaction surface. Unfortunately, no structural predictors provided a statistically significant model of integrase evolution.
 
-**Evolution in the protease**
+**Evolution of the HIV protease**
 
 The protease forms familiar heart-shaped dimer. The catalytic site of the complex is in the interface between the two monomers. As the enzyme active site must be accessible, the protein-protein binding region has a relatively high solvent exposure [Figure 5](#figure-5) compared to other protein-protein interfaces. As a result, we expected the highly solvent exposed catalytic site to cause an RSA-only model to perform poorly. Indeed, RSA alone could explain only 4.7% of the variation in *dN/dS*. By contrast, adding distance produced the second best model among the six proteins tested. The *dN/dS* predictions with the combined rsa-distance model showed that the catalytic site of protease is very conserved relative to the exterior regions of the protein [Figure 5A](#figure-5). Moreover, as with the gp120 protein the pattern of predicted rates is almost perfectly recapitulated by the correlation map [Figure 5B](#figure-5).
 
-**Evolution in the reverse transcriptase**
+**Evolution of the HIV reverse transcriptase**
 
 The reverse transcriptase protein is structural unique among the proteins in HIV. Although it forms a homo-dimeric quaternary structure, the two proteins in the functional assembly do not form the same tertiary structure. In addition, one of the two subunits in the functional assembly retains a separate catalytic domain known as RNase H. The unusual nature of the reverse transcriptase quaternary structure means that any structural model is likely doomed to failure. Despite this fact, we did find that the RSA of the first chain alone was a weak, but statistically significant predictor of *dN/dS*. The weakness of the model was highlighted by the fact that the site-wise *dN/dS* predictions mapped on to the reverse transcriptase structure showed no clear trend toward important regions of the protein [Figure 6A and 6B](#figure-6). For example, the region contacting nucleic acid did not appear to be particular conserved. Also, no set of distances from the first chain could add any predictive power, and strangely the RNase H domain appeared to be strongly conserved.
