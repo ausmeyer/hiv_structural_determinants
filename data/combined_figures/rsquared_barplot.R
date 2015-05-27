@@ -15,17 +15,17 @@ r.rsa.2 <- 0.1812471
 mean.dN.dS.2 <- 0.7836029
 r.2 <- "gp120"
 
-r.value.3 <- 0.02647536
-r.free.3 <- 0.02928405
-r.rsa.3 <- 0.003255963
-mean.dN.dS.3 <- 0.1889462
-r.3 <- "Integrase"
+r.value.3 <- 0.1325805
+r.free.3 <- 0.09904008
+r.rsa.3 <- 0.0609476
+mean.dN.dS.3 <- 0.5024948
+r.3 <- "Matrix"
 
-r.value.4 <- 0.1325805
-r.free.4 <- 0.09904008
-r.rsa.4 <- 0.0609476
-mean.dN.dS.4 <- 0.5024948
-r.4 <- "Matrix"
+r.value.4 <- 0.02647536
+r.free.4 <- 0.02928405
+r.rsa.4 <- 0.003255963
+mean.dN.dS.4 <- 0.1889462
+r.4 <- "Integrase"
 
 r.value.5 <- 0.3104171
 r.free.5 <- 0.3069456
@@ -49,12 +49,14 @@ rs <- c(r.value.1, r.free.1, r.rsa.1,
         r.value.4, r.free.4, r.rsa.4, 
         r.value.5, r.free.5, r.rsa.5, 
         r.value.6, r.free.6, r.rsa.6)
+
 r.names <- c(r.1, r.1, r.1,
              r.2, r.2, r.2,
              r.3, r.3, r.3,
              r.4, r.4, r.4, 
              r.5, r.5, r.5,
              r.6, r.6, r.6)
+r.names <- factor(r.names, levels=r.names)
 
 r.type <- rep(c('Combined - Optimized', 'Combined - Free', 'RSA - only'), 6)
 r.type <- factor(r.type, levels=r.type)
