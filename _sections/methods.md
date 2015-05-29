@@ -23,7 +23,7 @@ Protein structures were obtained from the RCSB Protein Databank (PDB) ([Berman 2
 
 To map protein structures onto the existing alignment, we used a developmental version of the sequence alignment software MAFFT ([Katoh 2012](https://dx.doi.org/10.1093/bioinformatics/bts578), [Katoh 2013](https://dx.doi.org/10.1093/molbev/mst010), [Katoh 2014](https://dx.doi.org/10.1007/978-1-62703-646-7_8)). This version included the ability to add a sequence to an existing alignment while removing any sites where there was an insertion in the protein structure sequence. Therefore, we used the following input line.
 
-<pre> <span style$$ dN/dS $$"font-family:Courier">mafft --mapout --addfragments aas.fasta alignment.fasta > added_alignment.fasta</span> </pre>
+<pre> <span style="font-family:Courier">mafft --mapout --addfragments aas.fasta alignment.fasta > added_alignment.fasta</span> </pre>
 
 ### Calculating structural predictors
 
