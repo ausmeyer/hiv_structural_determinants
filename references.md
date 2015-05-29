@@ -17,6 +17,7 @@
 * Scherrer MP, Meyer AG, Wilke CO. 2012. [Modeling coding-sequence evolution within the context of residue solvent accessibility](https://dx.doi.org/10.1186/1471-2148-12-179). BMC Evol. Biol. 12:179.
 * Meyer AG, Wilke CO. 2012. [Integrating sequence variation and protein structure to identify sites under selection](http://dx.doi.org/10.1093/molbev/mss217). Mol. Biol. Evol. 30:36-44.
 * Meyer AG, Dawson ET, Wilke CO. 2013. [Cross-species comparison of site-specific evolutionary-rate variation in influenza hemagglutinin](http://dx.doi.org/10.1098/rstb.2012.0334). Phil. Trans. R. Soc. B 368:20120334.
+* Meyer AG, Wilke CO. 2015. [Geometric Constraints Dominate the Antigenic Evolution of Influenza H3N2 Hemagglutinin](http://dx.doi.org/10.1371/journal.ppat.1004940). PLOS Pathogens 11:e1004940.
 * Ramsey DC, Scherrer MP, Wilke CO. 2011. [The relationship between relative solvent accessibility and evolutionary rate in protein evolution](https://dx.doi.org/10.1534/genetics.111.128025). Genetics 188:479-488.
 * Bustamante CD, Townsend JP, Hartl DL. 2000. [Solvent Accessibility and Purifying Selection Within Proteins of Escherichia coli and Salmonella enterica](http://www.ncbi.nlm.nih.gov/pubmed/10677853). Mol. Biol. Evol. 17:301-308.
 * Franzosa EA, Xia Y. 2009. [Structural Determinants of Protein Evolution Are Context-Sensitive at the Residue Level](https://dx.doi.org/10.1093/molbev/msp146). Mol. Biol. Evol. 26:2387-2395
