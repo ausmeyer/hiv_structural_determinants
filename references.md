@@ -1,4 +1,4 @@
-<> Basic Tools
+<!-- Basic Tools -->
 * Katoh K, Standley DM. 2013. [MAFFT multiple sequence alignment software version 7: improvements in performance and usability](https://dx.doi.org/10.1093/molbev/mst010).
 * Price MN, Dehal PS, Arkin AP. 2009. [FastTree 2 – approximately maximum-likelihood trees for large alignments](https://dx.doi.org/10.1371/journal.pone.0009490).
 * Yang Z. 2006. [Computational Molecular Evolution](http://download.bioon.com.cn/view/upload/month_0808/20080811_979a0656719f9157b466IruZP7mlp2U9.attach.pdf).
@@ -13,7 +13,7 @@
 * Kosakovsky-Pond SL, Frost SDW, Muse SV. 2005. [HyPhy: hypothesis testing using phylogenies](https://dx.doi.org/10.1093/bioinformatics/bti079). Bioinformatics 21:676-679.
 * Cock PJ, Antao T, Chang JT, Chapman BA, Cox CJ, Dalke A, Friedberg I, Hamelryck T, Kauff F, Wilczynski B, de Hoon MJ. 2009. [Biopython: freely available Python tools for computational molecular biology and bioinformatics](https://dx.doi.org/10.1093/bioinformatics/btp163). Bioinformatics 25:1422-1423.
 
-<> Structural Constraints
+<!-- Structural Constraints -->
 * Scherrer MP, Meyer AG, Wilke CO. 2012. [Modeling coding-sequence evolution within the context of residue solvent accessibility](https://dx.doi.org/10.1186/1471-2148-12-179). BMC Evol. Biol. 12:179.
 * Meyer AG, Wilke CO. 2012. [Integrating sequence variation and protein structure to identify sites under selection](http://dx.doi.org/10.1093/molbev/mss217). Mol. Biol. Evol. 30:36-44.
 * Meyer AG, Dawson ET, Wilke CO. 2013. [Cross-species comparison of site-specific evolutionary-rate variation in influenza hemagglutinin](http://dx.doi.org/10.1098/rstb.2012.0334). Phil. Trans. R. Soc. B 368:20120334.
