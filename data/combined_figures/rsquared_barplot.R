@@ -76,7 +76,7 @@ ggsave("r_squared.png", p, width=7.5, height=7.5)
 df.comp <- data.frame(x = df$r.square[df$r.type == 'RSA - only'], y = df$r.square[df$r.type == 'Combined - Test'], Protein = df$names[df$r.type == 'Combined - Test'])
 
 p <- ggplot(aes(x = x, y = y, colour=Protein), data = df.comp) +
-  geom_point(size=8) +
+  geom_point(size=4) +
   ylab(expression(paste("Combined Model - Test (R"^"2", ')', sep=''))) +
   xlab(expression(paste("RSA - only (R"^"2", ')', sep=''))) +
   scale_x_continuous(limits = c(0, 0.2)) +
