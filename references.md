@@ -2,12 +2,21 @@
 
 <!-- Basic Tools -->
 * Cock PJ, Antao T, Chang JT, Chapman BA, Cox CJ, Dalke A, Friedberg I, Hamelryck T, Kauff F, Wilczynski B, de Hoon MJ. 2009. [Biopython: freely available Python tools for computational molecular biology and bioinformatics](https://dx.doi.org/10.1093/bioinformatics/btp163). Bioinformatics 25:1422-1423.
-* Price MN, Dehal PS, Arkin AP. 2009. [FastTree 2 – approximately maximum-likelihood trees for large alignments](https://dx.doi.org/10.1371/journal.pone.0009490).
+* Price MN, Dehal PS, Arkin AP. 2009. [FastTree 2 – approximately maximum-likelihood trees for large alignments](https://dx.doi.org/10.1371/journal.pone.0009490). PLOS ONE 5:e9490.
 * Kosakovsky-Pond SL, Frost SDW, Muse SV. 2005. [HyPhy: hypothesis testing using phylogenies](https://dx.doi.org/10.1093/bioinformatics/bti079). Bioinformatics 21:676-679.
-* Muse SV, Gaut BS. 1994. [A likelihood approach for comparing synonymous and nonsynonymous nucleotide substitution rates, with application to the chloroplast genome](http://www.ncbi.nlm.nih.gov/pubmed/7968485).
+* Muse SV, Gaut BS. 1994. [A likelihood approach for comparing synonymous and nonsynonymous nucleotide substitution rates, with application to the chloroplast genome](http://www.ncbi.nlm.nih.gov/pubmed/7968485). Mol. Biol. Evol. 11:715-724.
 * Yang Z. 2006. [Computational Molecular Evolution](http://download.bioon.com.cn/view/upload/month_0808/20080811_979a0656719f9157b466IruZP7mlp2U9.attach.pdf).
 * Berman HM, Westbrook J, Feng Z, Gilliland G, Bhat TN, Wessig H, Shindyalov IN, Bourne PE. 2000. [The Protein Data Bank](https://dx.doi.org/10.1093/nar/28.1.235). Nucleic Acids Res. 28:88-95.
 * Berman HM. 2008. [The Protein Data Bank: a historical perspective](https://dx.doi.org/10.1107/S0108767307035623). Acta Crystallographica Section A: Foundations of Crystallography A64.
+
+<!-- Structures -->
+* Sarafianos SG, Das K, Tantillo C, Clark AD Jr, Ding J, Whitcomb JM, Boyer PL, Hughes SH, Arnold E. 2001. [Crystal structure of HIV-1 reverse transcriptase in complex with a polypurine tract RNA:DNA](https://dx.doi.org/10.1093/emboj/20.6.1449). EMBO J. 20:1449-1461.
+* Chen JC, Krucinski J, Miercke LJ, Finer-Moore JS, Tang AH, Leavitt AD, Stroud RM. 2000. [Crystal structure of the HIV-1 integrase catalytic core and C-terminal domains: a model for viral DNA binding](https://dx.doi.org/10.1073/pnas.150220297). Proc. Natl. Acad. Sci. 97:8233-8238.
+* Kim EE, Baker CT, Dwyer MD, Murcko MA, Rao BG, Tung RD, Navia MA. 1995. [Crystal structure of the HIV-1 integrase catalytic core and C-terminal domains: a model for viral DNA binding](https://dx.doi.org/10.1021/ja00108a056). J. Am. Chem. Soc. 117:1181-1182.
+* Pornillos O, Ganser-Pornillos BK, Kelly BN, Hua Y, Whitby FG, Stout CD, Sundquist WI, Hill CP, Yeager M. 2009. [X-ray structures of the hexameric building block of the HIV capsid](https://dx.doi.org/10.1016/j.cell.2009.04.063). Cell 137:1282-1292.
+* Hill CP, Worthylake D, Bancroft DP, Christensen AM, Sundquist WI. 1996. [Crystal structures of the trimeric human immunodeficiency virus type 1 matrix protein: implications for membrane association and assembly](http://www.ncbi.nlm.nih.gov/pubmed/8610175). Proc. Natl. Acad. Sci. 93:3099-3104.
+* Pancera M, Zhou T, Druz A, Georgiev IS, Soto C, Gorman J, Huang J, Acharya P, Chuang GY, Ofek G, Stewart-Jones GB, Stuckey J, Bailer RT, Joyce MG, Louder MK, Tumba N, Yang Y, Zhang B, Cohen MS, Haynes BF, Mascola JR, Morris L, Munro JB, Blanchard SC, Mothes W, Connors M, Kwong PD. 2014. [Structure and immune recognition of trimeric pre-fusion HIV-1 Env](https://dx.doi.org/10.1038/nature13808). Nature 514:455-461.
+
 * Katoh K, Frith MC. 2012. [Adding unaligned sequences into an existing alignment using MAFFT and LAST](https://dx.doi.org/10.1093/bioinformatics/bts578). Bioinformatics 28:3144-3146.
 * Katoh K, Standley DM. 2013. [MAFFT multiple sequence alignment software version 7: improvements in performance and usability](https://dx.doi.org/10.1093/molbev/mst010). Mol. Biol. Evol. 30:772-780.
 * Katoh K. Standley DM. 2014. [MAFFT: iterative refinement and additional methods](https://dx.doi.org/10.1007/978-1-62703-646-7_8). Methods in Molecular Biology 1079:131-146.
@@ -20,8 +29,8 @@
 
 <!-- Basic Tools -->
 * Kabsch W, Sander C. 1983. [Dictionary of protein secondary structure: pattern recognition of hydrogen-bonded and geometrical features](http://www.ncbi.nlm.nih.gov/pubmed/6667333). Biopolymers 22:2577-2637.
-* Tien MZ, Meyer AG, Sydykova DK, Spielman SJ, Wilke CO. 2013. [Maximum allowed solvent accessibilites of residues in proteins](https://dx.doi.org/10.1371/journal.pone.0080635).
-* Ihaka R, Gentleman R. 1996. [R: A language for data analysis and graphics](https://dx.doi.org/10.1080/10618600.1996.10474713).
+* Tien MZ, Meyer AG, Sydykova DK, Spielman SJ, Wilke CO. 2013. [Maximum allowed solvent accessibilites of residues in proteins](https://dx.doi.org/10.1371/journal.pone.0080635). PLOS ONE 8:e80635.
+* Ihaka R, Gentleman R. 1996. [R: A language for data analysis and graphics](https://dx.doi.org/10.1080/10618600.1996.10474713). Journal of Computational and Graphical Statistics 5:299-314.
 * Wickham H. 2009. [ggplot2: elegant graphics for data analysis](http://had.co.nz/ggplot2/book).
 
 <!-- Structural Constraints -->
