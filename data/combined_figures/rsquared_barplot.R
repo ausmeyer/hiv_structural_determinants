@@ -82,4 +82,4 @@ p <- ggplot(aes(x = x, y = y, colour=Protein), data = df.comp) +
   scale_x_continuous(limits = c(0, 0.2)) +
   scale_y_continuous(limits = c(0, 0.4))
 
-ggsave("CombinedVRSA.png", p, width=7.5, height=5.5)
+ggsave("combined_RSA.png", p, width=7.5, height=5.5)
