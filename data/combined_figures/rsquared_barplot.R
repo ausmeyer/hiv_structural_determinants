@@ -1,3 +1,5 @@
+rm(list = ls())
+
 library(ggplot2)
 library(cowplot)
 
@@ -83,3 +85,6 @@ p <- ggplot(aes(x = x, y = y, colour=Protein), data = df.comp) +
   scale_y_continuous(limits = c(0, 0.4))
 
 ggsave("combined_RSA.png", p, width=7.5, height=5.5)
+
+df.test <- data.frame(dN.dS = c(mean.dN.dS.1, mean.dN.dS.2, mean.dN.dS.3, mean.dN.dS.4, mean.dN.dS.5, mean.dN.dS.6),
+                      r.rsa = c(r.rsa.1, r.rsa.2, r.rsa.3, r.rsa.4, r.rsa.5, r.rsa.6))
