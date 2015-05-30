@@ -6,7 +6,7 @@ setwd('~/Google Drive/Documents/PostDoc/HIVStructuralDeterminants/hiv_structural
 r.value.1 <- 0.1001862
 r.free.1 <- 0.09242819
 r.rsa.1 <- 0.05076719
-mean.dN.dS.1 <- 0.2
+mean.dN.dS.1 <- 0.2008984
 r.1 <- "Capsid"
 
 r.value.2 <- 0.3716488
