@@ -20,31 +20,31 @@ source: ../data/cell-culture/culture.csv
 </thead>
 <tbody>
     <tr>
-    <th>RSA - only</th>
-    <th>Capsid</th>
-    <th>gp120</th>
-    <th>Matrix</th>
-    <th>Integrase</th>
-    <th>Protease</th>
-    <th>Reverse Transcriptase</th>
+    <td>RSA - only</td>
+    <td>Capsid</td>
+    <td>gp120</td>
+    <td>Matrix</td>
+    <td>Integrase</td>
+    <td>Protease</td>
+    <td>Reverse Transcriptase</td>
     </tr>
     <tr>
-    <th>Combined - Training</th>
-    <th>Capsid</th>
-    <th>gp120</th>
-    <th>Matrix</th>
-    <th>Integrase</th>
-    <th>Protease</th>
-    <th>Reverse Transcriptase</th>
+    <td>Combined - Training</td>
+    <td>Capsid</td>
+    <td>gp120</td>
+    <td>Matrix</td>
+    <td>Integrase</td>
+    <td>Protease</td>
+    <td>Reverse Transcriptase</td>
     </tr>
     <tr>
-    Combined - Test
-    Capsid
-    gp120
-    Matrix
-    Integrase
-    Protease
-    Reverse Transcriptase
+    <td>Combined - Test</td>
+    <td>Capsid</td>
+    <td>gp120</td>
+    <td>Matrix</td>
+    <td>Integrase</td>
+    <td>Protease</td>
+    <td>Reverse Transcriptase</td>
     </tr>
 </tbody>
 </table>
