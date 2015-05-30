@@ -38,13 +38,13 @@ source: ../data/cell-culture/culture.csv
     <th>Reverse Transcriptase</th>
     </tr>
     <tr>
-    <th>Combined - Test</th>
-    <th>Capsid</th>
-    <th>gp120</th>
-    <th>Matrix</th>
-    <th>Integrase</th>
-    <th>Protease</th>
-    <th>Reverse Transcriptase</th>
+    Combined - Test
+    Capsid
+    gp120
+    Matrix
+    Integrase
+    Protease
+    Reverse Transcriptase
     </tr>
 </tbody>
 </table>
