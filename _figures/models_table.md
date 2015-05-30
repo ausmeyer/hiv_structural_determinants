@@ -11,9 +11,9 @@ source: ../data/none
     <tr>
     <th></th>
     <th>Mean dN/dS</th>
-    <th>RSA: R<sup>2</sup></th>
-    <th>RSA + Distance: R<sup>2</sup>-Training</th>
-    <th>RSA + Distance: R<sup>2</sup>-Test</th>
+    <th>RSA<br>R<sup>2</sup></th>
+    <th>RSA + Distance<br>R<sup>2</sup>-Training</th>
+    <th>RSA + Distance<br>R<sup>2</sup>-Test</th>
     </tr>
 </thead>
 <tbody>
