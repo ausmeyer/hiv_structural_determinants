@@ -10,10 +10,10 @@ source: ../data/none
 <thead>
     <tr>
     <th></th>
-    <th>Mean $$dN/dS$$</th>
+    <th>Mean dN/dS</th>
     <th>RSA</th>
-    <th>RSA + Distance: Training</th>
-    <th>RSA + Distance: Test</th>
+    <th>RSA + Distance:<br> Training</th>
+    <th>RSA + Distance:<br> Test</th>
     </tr>
 </thead>
 <tbody>
@@ -55,7 +55,7 @@ source: ../data/none
     <td>0.047*</td>
     <td>0.310***</td>
     <td>0.307***</td>
-    <\tr>
+    </tr>
     
     <tr>
     <th>Reverse Transcriptase</th>
@@ -63,7 +63,7 @@ source: ../data/none
     <td>0.044***</td>
     <td>0.060***</td>
     <td>0.057***</td>
-    <\tr>
+    </tr>
     
 </tbody>
 </table>
