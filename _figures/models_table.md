@@ -43,5 +43,6 @@ source: ../data/cell-culture/culture.csv
     <th>Integrase</th>
     <th>Protease</th>
     <th>Reverse Transcriptase</th>
+    </tr>
 </tbody>
 </table>
