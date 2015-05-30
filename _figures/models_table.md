@@ -20,40 +20,40 @@ source: ../data/cell-culture/culture.csv
 </thead>
 <tbody>
     <tr>
-    <td>Mean $$ dN/dS $$</td>
-    <td>0.2008984</td>
-    <td>0.7836029</td>
-    <td>0.5024948</td>
-    <td>0.1889462</td>
-    <td>0.2619128</td>
-    <td>0.2514634</td>
+    <th>Mean $$dN/dS$$</th>
+    <td>0.201</td>
+    <td>0.784</td>
+    <td>0.502</td>
+    <td>0.189</td>
+    <td>0.262</td>
+    <td>0.251</td>
     </tr>
     <tr>
-    <td>RSA - only</td>
-    <td>0.05076719</td>
-    <td>0.1812471</td>
-    <td>0.0609476</td>
-    <td>0.003255963</td>
-    <td>0.04737184</td>
-    <td>0.04350685</td>
+    <th>RSA - only</th>
+    <td>0.051</td>
+    <td>0.181</td>
+    <td>0.061</td>
+    <td>0.003</td>
+    <td>0.047</td>
+    <td>0.044</td>
     </tr>
     <tr>
-    <td>Combined - Training</td>
-    <td>Capsid</td>
-    <td>gp120</td>
-    <td>Matrix</td>
-    <td>Integrase</td>
-    <td>Protease</td>
-    <td>Reverse Transcriptase</td>
+    <th>Combined - Training</th>
+    <td>0.100</td>
+    <td>0.372</td>
+    <td>0.133</td>
+    <td>0.026</td>
+    <td>0.310</td>
+    <td>0.060</td>
     </tr>
     <tr>
-    <td>Combined - Test</td>
-    <td>Capsid</td>
-    <td>gp120</td>
-    <td>Matrix</td>
-    <td>Integrase</td>
-    <td>Protease</td>
-    <td>Reverse Transcriptase</td>
+    <th>Combined - Test</th>
+    <td>0.092</td>
+    <td>0.364</td>
+    <td>0.099</td>
+    <td>0.029</td>
+    <td>0.307</td>
+    <td>0.057</td>
     </tr>
 </tbody>
 </table>
