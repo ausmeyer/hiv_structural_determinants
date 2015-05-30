@@ -10,10 +10,10 @@ source: ../data/none
 <thead>
     <tr>
     <th></th>
-    <th>Mean $$dN/dS$$</th>
-    <th>$$R^2$$ RSA</th>
-    <th>$$R^2$$ RSA + Distance: Training</th>
-    <th>$$R^2$$ RSA + Distance: Test</th>
+    <th>Mean *dN/dS*</th>
+    <th>R<sup>2</sup> RSA</th>
+    <th>R<sup>2</sup> RSA + Distance: Training</th>
+    <th>R<sup>2</sup> RSA + Distance: Test</th>
     </tr>
 </thead>
 <tbody>
