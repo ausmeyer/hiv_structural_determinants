@@ -28,6 +28,7 @@ source: ../data/cell-culture/culture.csv
     <th>Protease</th>
     <th>Reverse Transcriptase</th>
     </tr>
+    <tr>
     <th>Combined - Training</th>
     <th>Capsid</th>
     <th>gp120</th>
@@ -36,6 +37,7 @@ source: ../data/cell-culture/culture.csv
     <th>Protease</th>
     <th>Reverse Transcriptase</th>
     </tr>
+    <tr>
     <th>Combined - Test</th>
     <th>Capsid</th>
     <th>gp120</th>
