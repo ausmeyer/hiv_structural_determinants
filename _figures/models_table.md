@@ -1,10 +1,10 @@
 ---
 layout: figure
-order: 6
+order: 7
 label: Table 1
-title: "A table of the results"
-description: "A table about _some_ data"
-source: ../data/cell-culture/culture.csv
+title: "$$ R^{2} $$ values of all models for each dataset."
+description: "The table shows the raw numbers that are plotted in [Figure 6](#figure-6). Models with a * means p < 0.05, a ** means p < 0.01, a *** means p < 0.001."
+source: ../data/none
 ---
 <table class="table table-bordered">
 <thead>
@@ -20,7 +20,7 @@ source: ../data/cell-culture/culture.csv
 </thead>
 <tbody>
     <tr>
-    <th>Mean $$dN/dS$$</th>
+    <th>Mean dN/dS</th>
     <td>0.201</td>
     <td>0.784</td>
     <td>0.502</td>
@@ -30,30 +30,30 @@ source: ../data/cell-culture/culture.csv
     </tr>
     <tr>
     <th>RSA - only</th>
-    <td>0.051</td>
-    <td>0.181</td>
-    <td>0.061</td>
+    <td>0.051**</td>
+    <td>0.181***</td>
+    <td>0.061**</td>
     <td>0.003</td>
-    <td>0.047</td>
-    <td>0.044</td>
+    <td>0.047*</td>
+    <td>0.044***</td>
     </tr>
     <tr>
     <th>Combined - Training</th>
-    <td>0.100</td>
-    <td>0.372</td>
-    <td>0.133</td>
+    <td>0.100***</td>
+    <td>0.372***</td>
+    <td>0.133***</td>
     <td>0.026</td>
-    <td>0.310</td>
-    <td>0.060</td>
+    <td>0.310***</td>
+    <td>0.060***</td>
     </tr>
     <tr>
     <th>Combined - Test</th>
-    <td>0.092</td>
-    <td>0.364</td>
-    <td>0.099</td>
+    <td>0.092***</td>
+    <td>0.364***</td>
+    <td>0.099***</td>
     <td>0.029</td>
-    <td>0.307</td>
-    <td>0.057</td>
+    <td>0.307***</td>
+    <td>0.057***</td>
     </tr>
 </tbody>
 </table>

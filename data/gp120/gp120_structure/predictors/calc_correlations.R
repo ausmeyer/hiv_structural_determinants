@@ -42,7 +42,7 @@ print(mean(best.r))
 print(mean(rfree))
 
 fit.rsa <- lm(dN.dS ~ rsa)
-print(summary(fit.rsa)$r.squared)
+print(summary(fit.rsa))
 
 print(table(best.site))
 

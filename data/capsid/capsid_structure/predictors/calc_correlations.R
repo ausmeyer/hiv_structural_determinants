@@ -23,19 +23,17 @@ for(i in 1:100) {
   fit.rsa <- rsa[small.set]
   
   fit.correlations <- as.vector(sapply(1:ncol(fit.distances), function(x) cor(fit.dN.dS, 
-                                                                              predict(lm(fit.dN.dS ~ fit.rsa + fit.distances[, 152] + fit.distances[, 101] + fit.distances[, 148] + fit.distances[, x])))))
+                                                                              predict(lm(fit.dN.dS ~ fit.rsa + fit.distances[, x])))))
   
   best <- which(fit.correlations^2 == max(fit.correlations^2))
   best.site <- append(best.site, best)
   
   free.dN.dS <- dN.dS[-small.set]
   free.distances <- distances[-small.set, best]
-  distances.152 <- distances[-small.set, 152]
-  distances.101 <- distances[-small.set, 101]
-  distances.148 <- distances[-small.set, 148]
+
   free.rsa <- rsa[-small.set]
   
-  free.fit <- lm(free.dN.dS ~ free.rsa + free.distances + distances.152 + distances.101 + distances.148)
+  free.fit <- lm(free.dN.dS ~ free.rsa + free.distances)
   free.correlations <- cor(free.dN.dS, 
                            predict(free.fit))
   
@@ -49,10 +47,10 @@ print(mean(rfree))
 print(table(best.site))
 
 fit.rsa <- lm(dN.dS ~ rsa)
-print(summary(fit.rsa)$r.squared)
+print(summary(fit.rsa))
 
 fit.site <- as.numeric(names(sort(-table(best.site)))[1])
-fit <- lm(dN.dS ~ rsa + distances[, 152] + distances[, 101] + distances[, 148])
+fit <- lm(dN.dS ~ rsa + distances[, fit.site])
 print(summary(fit))
 
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
