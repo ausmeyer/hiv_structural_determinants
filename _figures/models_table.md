@@ -2,8 +2,8 @@
 layout: figure
 order: 7
 label: Table 1
-title: "$$ R^{2} $$ values of all models for each dataset."
-description: "The table shows the raw numbers that are plotted in [Figure 6](#figure-6). Models with * have 0.01 < p < 0.05, those with ** have 0.001 < p < 0.01, and those with *** have p < 0.001."
+title: "Mean $$ dN/dS $$ and $$ R^{2} $$ values of all models for each dataset."
+description: "The table shows the mean $$ dN/dS $$ and the raw $$ R^{2} $$ values that are plotted in [Figure 6](#figure-6). Models with * have 0.01 < p < 0.05, those with ** have 0.001 < p < 0.01, and those with *** have p < 0.001."
 source: ../data/none
 ---
 <table class="table table-bordered">
