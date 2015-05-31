@@ -114,5 +114,5 @@ p <- ggplot(aes(x = x, y = y, colour=Protein), data = df.comp) +
 ggsave("combined_RSA.png", p, width=7.5, height=5.5)
 
 p <- plot_grid(p.1, p.2, p.3, p.4, p.5, p.6, ncol = 1, labels = c('A', 'B', 'C', 'D', 'E', 'F'))
-ggsave("rate_distribution.png", p, width=2, height=11)
+ggsave("rate_distribution.pdf", p, width=4, height=22)
 
