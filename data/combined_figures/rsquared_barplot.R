@@ -13,8 +13,9 @@ get.rates <- function(location) {
 }
 
 plot.histogram <- function(data) {
-  p.tmp <- ggplot(data = data.frame(x=data), aes(x=x)) + geom_density() +
-    scale_x_continuous(limits = c(0, 7.5)) +
+  p.tmp <- ggplot(data = data.frame(x=data), aes(x=x)) + geom_density(fill='gray') +
+    scale_x_continuous(limits = c(0, 4)) +
+    scale_y_continuous(limits = c(0, 7)) + 
     xlab('dN/dS') +
     ylab('Probability Density') +
     geom_vline(xintercept = 1, linetype = "longdash")
