@@ -13,8 +13,8 @@
     <link rel="stylesheet" media="screen" href="{{ site.theme }}screen.css" no-shim>
     <link rel="stylesheet" media="print" href="{{ site.theme }}print.css" no-shim>
 
-    {% assign article = site.data.article %}
     {% assign sections = site.sections | sort:"order" %}
+    {% assign article = site.data.article %}
     {% assign figures = site.figures | sort:"order" %}
 
     {% if article.doi %}<meta name="citation_doi" content="{{ article.doi }}">{% endif %}
