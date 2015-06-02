@@ -53,20 +53,6 @@
             {% endfor %}
         </header>
 
-        <!-- sidebar sections -->
-        {% for section in sections %}
-            {% if section.container == 'sidebar' %}
-                 {% include section.html %}
-            {% endif %}
-        {% endfor %}
-            
-        <!-- sections -->
-        {% for section in sections %}
-            {% unless section.container %}
-                {% include section.html %}
-            {% endunless %}
-        {% endfor %}
-
         <!-- metadata -->
         <footer>
             {% if article.doi or article.github %}
@@ -135,6 +121,13 @@
                     {% endfor %}
                 </div>
             {% endif %}
+
+            <!-- sidebar sections -->
+            {% for section in sections %}
+                {% if section.container == 'sidebar' %}
+                    {% include section.html %}
+                {% endif %}
+            {% endfor %}
 
             <!-- figures -->
             {% if site.figures %}
