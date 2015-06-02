@@ -51,30 +51,6 @@
                     {% include section.html %}
                 {% endif %}
             {% endfor %}
-            
-            <!-- affiliations -->
-            {% if article.affiliations %}
-                <div id="affiliations">
-                    <h2>Affiliations</h2>
-                    {% for affiliation in article.affiliations %}
-                      {% include affiliation.html %}
-                    {% endfor %}
-                </div>
-            {% endif %}
-            
-            <!-- corresponding author(s) -->
-            <div id="corresponding-author">
-                <h2>Corresponding Author</h2>
-
-                <div class="inline-list">
-                    {% for author in article.authors %}
-                        {% if author.email %}
-                            <span><a href="mailto:{{ author.email }}">{{ author.name }}</a></span>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-            
         </header>
 
         <!-- sections -->
@@ -106,6 +82,16 @@
             </div>
             {% endif %}
 
+            <!-- affiliations -->
+            {% if article.affiliations %}
+                <div id="affiliations">
+                    <h2>Affiliations</h2>
+                    {% for affiliation in article.affiliations %}
+                      {% include affiliation.html %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
             <!-- contributions -->
             {% if article.contributions %}
                 <div id="contributions">
@@ -117,6 +103,19 @@
                     {% endfor %}
                 </div>
             {% endif %}
+
+            <!-- corresponding author(s) -->
+            <div id="corresponding-author">
+                <h2>Corresponding Author</h2>
+
+                <div class="inline-list">
+                    {% for author in article.authors %}
+                        {% if author.email %}
+                            <span><a href="mailto:{{ author.email }}">{{ author.name }}</a></span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
 
             <!-- funders -->
             {% if article.funders %}
