@@ -53,6 +53,13 @@
             {% endfor %}
         </header>
 
+        <!-- sections -->
+        {% for section in sections %}
+            {% unless section.container %}
+                {% include section.html %}
+            {% endunless %}
+        {% endfor %}
+
         <!-- metadata -->
         <footer>
             {% if article.doi or article.github %}
