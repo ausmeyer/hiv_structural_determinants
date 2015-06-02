@@ -14,7 +14,7 @@
     <link rel="stylesheet" media="print" href="{{ site.theme }}print.css" no-shim>
 
     {% assign article = site.data.article %}
-    {% assign sections = site.sections %}
+    {% assign sections = site.sections | sort:"order" %}
     {% assign figures = site.figures | sort:"order" %}
 
     {% if article.doi %}<meta name="citation_doi" content="{{ article.doi }}">{% endif %}
