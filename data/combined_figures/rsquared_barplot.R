@@ -45,9 +45,9 @@ mean.dN.dS.3 <- mean(rates.3)
 p.3 <- plot.histogram(rates.3)
 r.3 <- "Matrix"
 
-r.value.4 <- 0.02647536
-r.free.4 <- 0.02928405
-r.rsa.4 <- 0.003255963
+r.value.4 <- 0.01859244
+r.free.4 <- 0.03031527
+r.rsa.4 <- 0.00638955
 rates.4 <- get.rates('../integrase/integrase_structures/predictors/')
 mean.dN.dS.4 <- mean(rates.4)
 p.4 <- plot.histogram(rates.4)

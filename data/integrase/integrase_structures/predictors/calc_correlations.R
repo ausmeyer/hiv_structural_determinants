@@ -1,9 +1,9 @@
 rm(list = ls())
 
-map <- read.table('aas.fasta.map', sep=',', head=F, stringsAsFactors=F)
-rsa <- read.table('1EX4.rsa', head=T, stringsAsFactors=F)$RSA
+map <- read.table('aas.fasta_full_length_monomer1.map', sep=',', head=F, stringsAsFactors=F)
+rsa <- read.table('integrase_full_length.rsa', head=T, stringsAsFactors=F)$RSA
 rsa <- rsa[map$V3!='-']
-distances <- read.table('distances.dat', head=F, sep=',', stringsAsFactors=T)
+distances <- read.table('distances_integrase_full_length_monomer1.dat', head=F, sep=',', stringsAsFactors=T)
 distances <- distances[map$V3!='-', map$V3!='-']
 
 
@@ -14,6 +14,10 @@ dN.dS <- rates$dN.dS[as.numeric(keep.alignment.sites)]
 best.site <- c()
 best.r <- c()
 rfree <- c()
+
+print(dim(map))
+print(length(dN.dS))
+print(dim(distances))
 
 for(i in 1:100) {
   small.set <- sample(1:length(dN.dS), length(dN.dS)*0.75)
@@ -40,14 +44,15 @@ for(i in 1:100) {
 
 print(mean(best.r))
 print(mean(rfree))
+print(cor(dN.dS, rsa)^2)
 fit.rsa <- lm(dN.dS ~ rsa)
-print(summary(fit.rsa))
+print(summary(fit.rsa)$r.squared)
 
 print(table(best.site))
 
 fit.site <- as.numeric(names(sort(-table(best.site)))[1])
 fit <- lm(dN.dS ~ rsa + distances[, fit.site])
-print(summary(fit))
+#print(summary(fit))
 
 fit.distance <- lm(dN.dS ~ distances[, fit.site])
 print(summary(fit.distance))

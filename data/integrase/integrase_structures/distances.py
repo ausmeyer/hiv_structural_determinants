@@ -44,7 +44,7 @@ def calc_distances_sia():
                 
 def main():
     parser = PDBParser()
-    structure = parser.get_structure('temp', '1EX4_monomer.pdb')
+    structure = parser.get_structure('temp', 'integrase_full_length_monomer2.pdb')
     calc_distances_aas(structure[0])
     
 main()
