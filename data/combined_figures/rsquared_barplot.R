@@ -12,12 +12,26 @@ get.rates <- function(location) {
   return(rates$dN.dS[as.numeric(keep.alignment.sites)])
 }
 
+fit.distribution <- function(dat, par.pass) {
+  fr <- function(par.pass) {
+    means <- diff(pgamma(seq(0, max(dat), by=0.04), shape = par.pass[1], rate = par.pass[2]))*length(dat)
+    empirical <- as.numeric(table(cut(dat, breaks = seq(0, max(dat), by=0.04))))
+    return(sum(abs(means - empirical)))
+  }
+  
+  fit <- optim(par.pass, fr, method="Nelder-Mead", control = list(maxit = 10000))
+  return(fit)
+}
+
 plot.histogram <- function(data) {
-  p.tmp <- ggplot(data = data.frame(x=data), aes(x=x)) + geom_density(fill='gray') +
+  fit <- fit.distribution(data, c(1, 1))
+  p.tmp <- ggplot(data = data.frame(x=data), aes(x=x)) + 
+    geom_histogram(aes(y=..density..), color='gray', fill='gray', binwidth=0.04) +
+    stat_function(fun=dgamma, args=list(shape = fit$par[1], rate = fit$par[2]), size=0.5) +
     scale_x_continuous(limits = c(0, 4)) +
-    scale_y_continuous(limits = c(0, 7)) + 
+    scale_y_continuous(limits = c(0, 5)) + 
     xlab('dN/dS') +
-    ylab('Probability Density') +
+    ylab('Count') +
     geom_vline(xintercept = 1, linetype = "longdash")
 }
 
@@ -116,4 +130,4 @@ ggsave("combined_RSA.png", p, width=7.5, height=5.5)
 
 p <- plot_grid(p.1, p.2, p.3, p.4, p.5, p.6, ncol = 2, labels = c('A', 'B', 'C', 'D', 'E', 'F'))
 ggsave("rate_distribution.png", p, width=8, height=12)
-
+ggsave("rate_distribution.pdf", p, width=8, height=12)

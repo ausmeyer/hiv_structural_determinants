@@ -40,7 +40,8 @@
 * Franzosa EA, Xia Y. 2009. [Structural Determinants of Protein Evolution Are Context-Sensitive at the Residue Level](https://dx.doi.org/10.1093/molbev/msp146). Mol. Biol. Evol. 26: 2387-2395
 * Ramsey DC, Scherrer MP, Wilke CO. 2011. [The relationship between relative solvent accessibility and evolutionary rate in protein evolution](https://dx.doi.org/10.1534/genetics.111.128025). Genetics 188: 479-488.
 * Shahmoradi A, Sydykova DK, Spielman SJ, Jackson EL, Dawson ET, Meyer AG, Wilke CO. 2014. [Predicting evolutionary site variability from structure in viral proteins: buriedness, packing, flexibility, and design](https://dx.doi.org/10.1007/s00239-014-9644-x). J. Mol. Evol. 79: 130-142.
-* Echave J, Jackson EL, Wilke CO. 2014. [Relationship between protein thermodynamic constraints and variation of evolutionary rates among sites](https://dx.doi.org/10.1088/1478-3975/12/2/025002). Phys. Biol. 12: 025002. 
+* Echave J, Jackson EL, Wilke CO. 2014. [Relationship between protein thermodynamic constraints and variation of evolutionary rates among sites](https://dx.doi.org/10.1088/1478-3975/12/2/025002). Phys. Biol. 12: 025002.
+* Marcos M, Echave J. 2015. [Too packed to change: side-chain packing and site-specific substitution rates in protein evolution](https://dx.doi.org/10.7717/peerj.911). PeerJ 3: e911.  
 * Huang TT, Marcos ML, Hwang JK, Echave J. 2014. [A mechanistic stress model of protein evolution accounts for site-specific evolutionary rates and their relationship with packing density and flexibility](https://dx.doi.org/10.1186/1471-2148-14-78). BMC Evol. Biol. 78: 14.
 * Sikosek T, Chan HS. 2014. [Biophysics of protein evolution and evolutionary protein biophysics](https://dx.doi.org/10.1098/rsif.2014.0419). J. Royal Soc. Interface 11: 20140419.
 
