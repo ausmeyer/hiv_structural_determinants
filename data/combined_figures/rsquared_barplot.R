@@ -14,9 +14,9 @@ get.rates <- function(location) {
 
 fit.distribution <- function(dat, par.pass) {
   fr <- function(par.pass) {
-    means <- diff(pgamma(seq(0, max(dat), by=0.04), shape = par.pass[1], rate = par.pass[2]))*length(dat)
-    empirical <- as.numeric(table(cut(dat, breaks = seq(0, max(dat), by=0.04))))
-    return(sum(abs(means - empirical)))
+    expected <- diff(pgamma(seq(0, max(dat), by = 0.06), shape = par.pass[1], rate = par.pass[2]))*length(dat)
+    observed <- as.numeric(table(cut(dat, breaks = seq(0, max(dat), by = 0.06))))
+    return(sum((observed - expected)^2/expected))
   }
   
   fit <- optim(par.pass, fr, method="Nelder-Mead", control = list(maxit = 10000))
@@ -24,12 +24,23 @@ fit.distribution <- function(dat, par.pass) {
 }
 
 plot.histogram <- function(data) {
-  fit <- fit.distribution(data, c(1, 1))
+  fit <- fit.distribution(data, c(1, 1)) 
+  
+  #Calculate chi-squared statistic
+  expected <- diff(pgamma(seq(0, max(data), by = 0.06), shape = fit$par[1], rate = fit$par[2]))*length(data)
+  observed <- as.numeric(table(cut(data, breaks = seq(0, max(data), by = 0.06))))
+  chisq.stat <- sum((observed - expected)^2/expected)
+
+  #Calculate degrees of freedom
+  dof <- ceiling(max(data)/0.06) - 1 - 2
+  
+  print(pchisq(q = chisq.stat, df = dof, lower.tail=FALSE))
+
   p.tmp <- ggplot(data = data.frame(x=data), aes(x=x)) + 
-    geom_histogram(aes(y=..density..), color='gray', fill='gray', binwidth=0.04) +
-    stat_function(fun=dgamma, args=list(shape = fit$par[1], rate = fit$par[2]), size=0.5) +
-    scale_x_continuous(limits = c(0, 4)) +
-    scale_y_continuous(limits = c(0, 5)) + 
+    geom_histogram(aes(y=..density..), color='gray', fill='gray', binwidth = 0.06) +
+    stat_function(fun=dgamma, args=list(shape = fit$par[1], rate = fit$par[2]), size=0.4) +
+    scale_x_continuous(limits = c(0, 3)) +
+    scale_y_continuous(limits = c(0, 10)) + 
     xlab('dN/dS') +
     ylab('Count') +
     geom_vline(xintercept = 1, linetype = "longdash")
@@ -83,9 +94,9 @@ mean.dN.dS.6 <- mean(rates.6)
 p.6 <- plot.histogram(rates.6)
 r.6 <- "Reverse Transcriptase"
 
-print(mean(r.value.1, r.value.2, r.value.3, r.value.4, r.value.5, r.value.6))
-print(mean(r.free.1, r.free.2, r.free.3, r.free.4, r.free.5, r.free.6))
-print(mean(r.rsa.1, r.rsa.2, r.rsa.3, r.rsa.4, r.rsa.5, r.rsa.6))
+#print(mean(r.value.1, r.value.2, r.value.3, r.value.4, r.value.5, r.value.6))
+#print(mean(r.free.1, r.free.2, r.free.3, r.free.4, r.free.5, r.free.6))
+#print(mean(r.rsa.1, r.rsa.2, r.rsa.3, r.rsa.4, r.rsa.5, r.rsa.6))
 
 rs <- c(r.value.1, r.free.1, r.rsa.1, 
         r.value.2, r.free.2, r.rsa.2, 
