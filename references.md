@@ -46,3 +46,26 @@
 * Sikosek T, Chan HS. 2014. [Biophysics of protein evolution and evolutionary protein biophysics](https://dx.doi.org/10.1098/rsif.2014.0419). J. Royal Soc. Interface 11: 20140419.
 
 * Grahnen JA, Nandakumar P, Kubelka J, Liberles DA. 2011. [Biophysical and structural consideration for protein sequence evolution](https://dx.doi.org/10.1186/1471-2148-11-361). BMC Evol. Biol. 11: 2455-2464.
+
+<!-- HIV Papers -->
+* Mansky LM, Temin HM. 1995. [Lower in vivo mutation rate of human immunodeficiency virus type 1 than that predicted from the fidelity of purified reverse transcriptase](http://www.ncbi.nlm.nih.gov/pubmed/7541846). J. Virol. 69: 5087-5094.
+* Frost SD, Wrin T, Smith DM, Kosakovsky Pond SL, Liu Y, Paxinos E, Chappey C, Galovich J, Beauchaine J, Petropoulos CJ, Little SJ, Richman DD. 2005. [Neutralizing antibody responses drive the evolution of human immunodeficiency virus type 1 envelope during recent HIV infection](https://dx.doi.org/10.1073/pnas.0504658102). Proc. Natl. Acad. Sci. 102: 18514–18519.
+* Wei X, Ghosh SK, Taylor ME, Johnson VA, Emini EA, Deutsch P, Lifson JD, Bonhoeffer S, Nowak MA, Hahn BH, Saag MS, Shaw GM. 1995. [Viral Dynamics in human immunodeficiency virus type 1 infection](https://dx.doi.org/10.1038/373117a0) Nature 373: 117-122
+* Wei X, Decker JM, Wang S, Hui H, Kappes JC, Wu X, Salazar-Gonzalez JF, Salazar MG, Kilby JM, Saag MS, Komarova NL, Nowak MA, Hahn BH, Kwong PD, Shaw GM. 2002. [Antibody neutralization and escape by HIV-1](https://dx.doi.org/10.1038/nature01470) Nature. 422: 307-12.
+* Perelson AS, Neumann AU, Markowitz M, Leonard JM, Ho DD. 1996. [HIV-1 dynamics in vivo: Virion clearance rate, infected cell life-span, and viral generation time](https://dx.doi.org/10.1126/science.271.5255.1582). Science 271: 1582-1586.
+* Perelson AS, Essunger P, Cao Y, Vesanen M, Hurley A, Saksela K, Markowitz M, Ho DD 1997. [Decay characteristics of HIV-1-infected compartments during combination therapy](https://dx.doi.org/10.1038/387188a0). Nature 387: 188-191.
+* Chun TW, Carruth L, Finzi D, Shen XF, DiGiuseppe JA, Taylor H, Hermankova M, Chadwick K, Margolick J, Quinn TC, Kuo YH, Brookmeyer R, Zeiger MA, BarditchCrovo P, Siliciano RF. 1997. [Quantification of latent tissue reservoirs and total body viral load in HIV-1 Infection](https://dx.doi.org/10.1038/387183a0). Nature 387: 183-188.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
