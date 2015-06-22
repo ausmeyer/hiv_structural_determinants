@@ -142,6 +142,7 @@ p <- ggplot(aes(x = names, y = r.square, fill=r.type, colour=NULL), data = df) +
   scale_y_continuous(limits = c(0, 0.4))
 
 ggsave("r_squared.png", p, width=7.5, height=7.5)
+ggsave("r_squared.pdf", p, width=7.5, height=7.5)
 
 df.comp <- data.frame(x = df$r.square[df$r.type == 'RSA - only'], y = df$r.square[df$r.type == 'Combined - Test'], Protein = df$names[df$r.type == 'Combined - Test'])
 
@@ -153,6 +154,7 @@ p <- ggplot(aes(x = x, y = y, colour=Protein), data = df.comp) +
   scale_y_continuous(limits = c(0, 0.4))
 
 ggsave("combined_RSA.png", p, width=7.5, height=5.5)
+ggsave("combined_RSA.pdf", p, width=7.5, height=5.5)
 
 p <- plot_grid(p.1, p.2, p.3, p.4, p.5, p.6, ncol = 2, labels = c('A', 'B', 'C', 'D', 'E', 'F'))
 ggsave("rate_distribution.png", p, width=8, height=12)

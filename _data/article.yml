@@ -1,7 +1,7 @@
 # Note: to avoid repeating the same data multiple times,
 # identifiers (starting with "&") are referenced later (starting with "*")
 
-title: "Structural determinants of HIV evolution"
+title: "Protein structural determinants of HIV evolution"
 date: 2015-03-15T12:00:00Z
 doi: # e.g. 10.1234/example.1
 github: ausmeyer/hivgp120-paper-now
@@ -50,15 +50,7 @@ funders:
       - name: R01 GM088344
         recipients:
           - *claus-wilke
-
-  - name: "Army Research Office"
-    url: http://www.arl.army.mil
-    sameAs: ""
-    awards:
-      - name: W911NF-12-1-0390
-        recipients:
-          - *claus-wilke
-          
+     
   - name: "National Science Foundation"
     url: http://www.nsf.gov
     sameAs: ""
