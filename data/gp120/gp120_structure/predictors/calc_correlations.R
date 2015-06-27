@@ -40,17 +40,24 @@ for(i in 1:100) {
 
 print(mean(best.r))
 print(mean(rfree))
+print(table(best.site))
+
+fit.site <- as.numeric(names(sort(-table(best.site)))[1])
 
 fit.rsa <- lm(dN.dS ~ rsa)
 print(summary(fit.rsa))
-
-print(table(best.site))
+fit.rsa <- lm(dN.dS ~ distances[,fit.site])
+print(summary(fit.rsa))
 
 glyc <- read.table('4TVP_glycosylations.txt', head=F, stringsAsFactors = F)
 glycosylations <- rep(0, length(dN.dS))
 glycosylations[glyc$V1] <- 1
-fit.site <- as.numeric(names(sort(-table(best.site)))[1])
+
 fit <- lm(dN.dS ~ rsa + glycosylations)
+print(summary(fit))
+fit <- lm(dN.dS ~ distances[,fit.site] + glycosylations)
+print(summary(fit))
+fit <- lm(dN.dS ~ distances[,fit.site] + rsa)
 print(summary(fit))
 
 correlations <- as.vector(sapply(1:ncol(distances), function(x) cor(dN.dS, 
