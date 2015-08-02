@@ -3,7 +3,7 @@ rm(list = ls())
 library(ggplot2)
 library(cowplot)
 
-setwd('~/Google Drive/Documents/PostDoc/HIVStructuralDeterminants/hiv_structural_determinants/data/combined_figures/')
+setwd('~/Google Drive/Documents/PostDoc/HIVStructuralDeterminants/hiv_structural_determinants/combined_figures/')
 
 get.rates <- function(location) {
   rates <- read.table(paste(location, 'sites.dat', sep=''), sep=',', head=T)
@@ -56,7 +56,7 @@ plot.gamma.histogram <- function(data) {
     scale_x_continuous(limits = c(0, 3)) +
     scale_y_continuous(limits = c(0, 12)) + 
     xlab('dN/dS') +
-    ylab('Count') +
+    ylab('Probability Density') +
     geom_vline(xintercept = 1, linetype = "longdash")
   
   return(list(plot = p.tmp, fit = fit))
@@ -84,7 +84,7 @@ plot.beta.histogram <- function(data) {
     scale_x_continuous(limits = c(0, 3)) +
     scale_y_continuous(limits = c(0, 12)) + 
     xlab('dN/dS') +
-    ylab('Count') +
+    ylab('Probability Density') +
     geom_vline(xintercept = 1, linetype = "longdash")
   
   return(list(plot = p.tmp, fit = fit))
