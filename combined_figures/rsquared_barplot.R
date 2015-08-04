@@ -20,6 +20,7 @@ fit.gamma.distribution <- function(dat, par.pass) {
   }
   
   fit <- optim(par.pass, fr, method="Nelder-Mead", control = list(maxit = 10000))
+  print(fit)
   return(fit)
 }
 
