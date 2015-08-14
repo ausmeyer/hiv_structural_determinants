@@ -20,7 +20,6 @@ fit.gamma.distribution <- function(dat, par.pass) {
   }
   
   fit <- optim(par.pass, fr, method="Nelder-Mead", control = list(maxit = 10000))
-  print(fit)
   return(fit)
 }
 
@@ -36,11 +35,19 @@ fit.beta.distribution <- function(dat, par.pass) {
 }
 
 plot.gamma.histogram <- function(data) {
-  #data <- data[data <= 1]
-  fit <- fit.gamma.distribution(data, c(1, 1)) 
+  shapes = c()
+  rates = c()
+  for(i in 1:100){
+    tmp.data <- sample(data, length(data), replace = TRUE)
+    fit <- fit.gamma.distribution(tmp.data, c(1, 1)) 
+    shapes <- append(shapes, fit$par[1])
+    rates <- append(rates, fit$par[2])
+  } 
+  
+  fit = data.frame(shape = mean(shapes), shape.error = sd(shapes), rate = mean(rates), rate.error = sd(rates))
   
   #Calculate chi-squared statistic
-  expected <- diff(pgamma(seq(0, max(data), by = 0.05), shape = fit$par[1], rate = fit$par[2]))*length(data)
+  expected <- diff(pgamma(seq(0, max(data), by = 0.05), shape = fit$shape, rate = fit$rate))*length(data)
   observed <- as.numeric(table(cut(data, breaks = seq(0, max(data), by = 0.05))))
   chisq.stat <- sum((observed - expected)^2/expected)
 
@@ -49,11 +56,11 @@ plot.gamma.histogram <- function(data) {
   
   print("Gamma")
   print(pchisq(q = chisq.stat, df = dof, lower.tail=FALSE))
-  print(fit$par)
+  print(fit)
 
   p.tmp <- ggplot(data = data.frame(x=data), aes(x=x)) + 
     geom_histogram(aes(y=..density..), color='gray', fill='gray', binwidth = 0.05) +
-    stat_function(fun=dgamma, args=list(shape = fit$par[1], rate = fit$par[2]), size=0.4) +
+    stat_function(fun=dgamma, args=list(shape = fit$shape, rate = fit$rate), size=0.4) +
     scale_x_continuous(limits = c(0, 3)) +
     scale_y_continuous(limits = c(0, 12)) + 
     xlab('dN/dS') +
@@ -64,11 +71,20 @@ plot.gamma.histogram <- function(data) {
 }
 
 plot.beta.histogram <- function(data) {
-  #data <- data[data <= 1]
-  fit <- fit.beta.distribution(data, c(1, 1)) 
+  
+  shapes = c()
+  rates = c()
+  for(i in 1:100){
+    tmp.data <- sample(data, length(data), replace = TRUE)
+    fit <- fit.beta.distribution(tmp.data, c(1, 1)) 
+    shapes <- append(shapes, fit$par[1])
+    rates <- append(rates, fit$par[2])
+  }
+  
+  fit = data.frame(shape = mean(shapes), shape.error = sd(shapes), rate = mean(rates), rate.error = sd(rates))
   
   #Calculate chi-squared statistic
-  expected <- diff(pbeta(seq(0, 1, by = 0.05), shape1 = fit$par[1], shape2 = fit$par[2]))*length(data)
+  expected <- diff(pbeta(seq(0, 1, by = 0.05), shape1 = fit$shape, shape2 = fit$rate))*length(data)
   observed <- as.numeric(table(cut(data, breaks = seq(0, 1, by = 0.05))))
   chisq.stat <- sum((observed - expected)^2/expected)
   
@@ -77,11 +93,11 @@ plot.beta.histogram <- function(data) {
   
   print("Beta")
   print(pchisq(q = chisq.stat, df = dof, lower.tail=FALSE))
-  print(fit$par)
+  print(fit)
   
   p.tmp <- ggplot(data = data.frame(x=data), aes(x=x)) + 
     geom_histogram(aes(y=..density..), color='gray', fill='gray', binwidth = 0.05) +
-    stat_function(fun=dgamma, args=list(shape = fit$par[1], rate = fit$par[2]), size=0.4) +
+    stat_function(fun=dgamma, args=list(shape = fit$shape, rate = fit$rate), size=0.4) +
     scale_x_continuous(limits = c(0, 3)) +
     scale_y_continuous(limits = c(0, 12)) + 
     xlab('dN/dS') +
