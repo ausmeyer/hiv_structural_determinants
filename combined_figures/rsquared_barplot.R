@@ -215,13 +215,17 @@ ggsave("r_squared.png", p, width=7.5, height=7.5)
 ggsave("r_squared.pdf", p, width=7.5, height=7.5)
 
 df.comp <- data.frame(x = df$r.square[df$r.type == 'RSA - only'], y = df$r.square[df$r.type == 'Combined - Test'], Protein = df$names[df$r.type == 'Combined - Test'])
+colours <- c("blue3", "limegreen",
+             "darkorchid2", "goldenrod2",
+             "grey45", "red2")
 
 p <- ggplot(aes(x = x, y = y, colour=Protein), data = df.comp) +
   geom_point(size=4) +
   ylab(expression(paste("Combined Model - Test (R"^"2", ')', sep=''))) +
   xlab(expression(paste("RSA - only (R"^"2", ')', sep=''))) +
   scale_x_continuous(limits = c(0, 0.2)) +
-  scale_y_continuous(limits = c(0, 0.4))
+  scale_y_continuous(limits = c(0, 0.4)) +
+  scale_colour_manual(values = colours)
 
 ggsave("combined_RSA.png", p, width=7.5, height=5.5)
 ggsave("combined_RSA.pdf", p, width=7.5, height=5.5)
