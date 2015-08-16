@@ -240,8 +240,8 @@ ggsave("combined_RSA.pdf", p, width=7.5, height=5.5)
 p <- ggplot(aes(x = identity, y = y, colour=Protein), data = df.comp) +
   geom_point(size=4) +
   ylab(expression(paste("Combined Model - Test (R"^"2", ')', sep=''))) +
-  xlab('Mean Sequence Identity') +
-  scale_x_continuous(limits = c(0, 0.2)) +
+  xlab(expression(paste('Mean Sequence Identity', sep=''))) +
+  scale_x_reverse(limits = c(1, 0.75)) +
   scale_y_continuous(limits = c(0, 0.4)) +
   scale_colour_manual(values = colours)
 
