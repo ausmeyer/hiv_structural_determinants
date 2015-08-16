@@ -110,6 +110,7 @@ plot.beta.histogram <- function(data) {
 r.value.1 <- 0.1001862
 r.free.1 <- 0.09242819
 r.rsa.1 <- 0.05076719
+identity.1 <- 0.919368312397
 rates.1 <- get.rates('../capsid/capsid_structure/predictors/')
 mean.dN.dS.1 <- mean(rates.1)
 tmp.gamma <- plot.gamma.histogram(rates.1)
@@ -122,6 +123,7 @@ r.1 <- "Capsid"
 r.value.2 <- 0.3716488
 r.free.2 <- 0.3637618
 r.rsa.2 <- 0.1812471
+identity.2 <- 0.786208140189
 rates.2 <- get.rates('../gp120/gp120_structure/predictors/')
 mean.dN.dS.2 <- mean(rates.2)
 tmp.gamma <- plot.gamma.histogram(rates.2)
@@ -134,6 +136,7 @@ r.2 <- "gp120"
 r.value.3 <- 0.1325805
 r.free.3 <- 0.09904008
 r.rsa.3 <- 0.0609476
+identity.3 <- 0.815531384835
 rates.3 <- get.rates('../matrix/matrix_structure/predictors/')
 mean.dN.dS.3 <- mean(rates.3)
 tmp.gamma <- plot.gamma.histogram(rates.3)
@@ -146,6 +149,7 @@ r.3 <- "Matrix"
 r.value.4 <- 0.01859244
 r.free.4 <- 0.03031527
 r.rsa.4 <- 0.00638955
+identity.4 <- 0.943424064298
 rates.4 <- get.rates('../integrase/integrase_structures/predictors/')
 mean.dN.dS.4 <- mean(rates.4)
 tmp.gamma <- plot.gamma.histogram(rates.4)
@@ -158,6 +162,7 @@ r.4 <- "Integrase"
 r.value.5 <- 0.3104171
 r.free.5 <- 0.3069456
 r.rsa.5 <- 0.04737184
+identity.5 <- 0.903762480411
 rates.5 <- get.rates('../protease/protease_structure/predictors/')
 mean.dN.dS.5 <- mean(rates.5)
 tmp.gamma <- plot.gamma.histogram(rates.5)
@@ -170,6 +175,7 @@ r.5 <- "Protease"
 r.value.6 <- 0.06046455
 r.free.6 <- 0.05723965
 r.rsa.6 <- 0.04350685
+identity.6 <- 0.926845051545
 rates.6 <- get.rates('../reverse_transcriptase/rt_structures/predictors/')
 mean.dN.dS.6 <- mean(rates.6)
 tmp.gamma <- plot.gamma.histogram(rates.6)
@@ -214,7 +220,8 @@ p <- ggplot(aes(x = names, y = r.square, fill=r.type, colour=NULL), data = df) +
 ggsave("r_squared.png", p, width=7.5, height=7.5)
 ggsave("r_squared.pdf", p, width=7.5, height=7.5)
 
-df.comp <- data.frame(x = df$r.square[df$r.type == 'RSA - only'], y = df$r.square[df$r.type == 'Combined - Test'], Protein = df$names[df$r.type == 'Combined - Test'])
+identity <- c(identity.1, identity.2, identity.3, identity.4, identity.5, identity.6)
+df.comp <- data.frame(x = df$r.square[df$r.type == 'RSA - only'], y = df$r.square[df$r.type == 'Combined - Test'], identity = identity, Protein = df$names[df$r.type == 'Combined - Test'])
 colours <- c("blue3", "limegreen",
              "darkorchid2", "goldenrod2",
              "grey45", "red2")
@@ -229,6 +236,17 @@ p <- ggplot(aes(x = x, y = y, colour=Protein), data = df.comp) +
 
 ggsave("combined_RSA.png", p, width=7.5, height=5.5)
 ggsave("combined_RSA.pdf", p, width=7.5, height=5.5)
+
+p <- ggplot(aes(x = identity, y = y, colour=Protein), data = df.comp) +
+  geom_point(size=4) +
+  ylab(expression(paste("Combined Model - Test (R"^"2", ')', sep=''))) +
+  xlab('Mean Sequence Identity') +
+  scale_x_continuous(limits = c(0, 0.2)) +
+  scale_y_continuous(limits = c(0, 0.4)) +
+  scale_colour_manual(values = colours)
+
+ggsave("combined_identity.png", p, width=7.5, height=5.5)
+ggsave("combined_identity.pdf", p, width=7.5, height=5.5)
 
 p <- plot_grid(p.1, p.2, p.3, p.4, p.5, p.6, ncol = 2, labels = c('A', 'B', 'C', 'D', 'E', 'F'))
 ggsave("rate_distribution.png", p, width=8, height=12)
